@@ -1,0 +1,24 @@
+.wy-side-nav-search, .wy-nav-top {
+    background: #bdc3c7;
+}
+
+.wy-nav-side {
+  background: #ecf0f1;
+}
+
+.wy-nav-side .caption-text{
+  color: #34495e;
+}
+
+.wy-nav-side .reference.internal {
+  color: #34495e;
+}
+
+.wy-nav-side .reference.internal:hover {
+  background: #2980b9;
+  color: #ecf0f1;
+}
+
+.wy-nav-content-wrap {
+  background: #fcfcfc;
+}

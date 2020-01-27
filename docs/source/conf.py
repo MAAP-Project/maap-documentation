@@ -14,6 +14,9 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
+def setup(app):
+    app.add_css_file('custom.css')
+
 
 # -- Project information -----------------------------------------------------
 
@@ -48,6 +51,11 @@ master_doc = 'index'
 # a list of builtin themes.
 #
 html_theme = 'sphinx_rtd_theme'
+html_logo = "_static/nasamaap_logo.png"
+html_favicon = "_static/maapsheep-80x80.png"
+html_theme_options = {
+    'logo_only': True
+}
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
