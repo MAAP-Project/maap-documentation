@@ -2,7 +2,7 @@
     background: #bdc3c7;
 }
 
-.wy-side-nav-search, .version {
+.wy-side-nav-search>div.version {
     color: #34495e;
 }
 
