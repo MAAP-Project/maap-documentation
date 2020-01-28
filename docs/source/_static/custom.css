@@ -2,6 +2,10 @@
     background: #bdc3c7;
 }
 
+.wy-side-nav-search, .version {
+    color: #34495e;
+}
+
 .wy-nav-side {
   background: #ecf0f1;
 }
