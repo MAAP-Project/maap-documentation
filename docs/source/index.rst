@@ -7,8 +7,10 @@ Welcome to maap-docs's documentation!
 =====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Search:
+
+  search/maap_collection_search.ipynb
 
 
 
