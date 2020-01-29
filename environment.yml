@@ -2,8 +2,10 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - matplotlib
+  - python==3.5
+  - sphinx>=1.4
+  - pandoc
+  - nbconvert
+  - ipykernel
   - pip:
-    - ipykernel
     - nbsphinx
-    - sphinxcontrib-napoleon
