@@ -1,5 +1,4 @@
 python:
-  version: 3.7
-
-conda:
-  environment: ./environment.yml
+   version: 3.7
+   install:
+      - requirements: requirements.txt
