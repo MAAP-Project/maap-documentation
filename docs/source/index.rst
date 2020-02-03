@@ -11,6 +11,7 @@ Welcome to maap-docs's documentation!
   :caption: Search:
 
   search/maap_collection_search.ipynb
+  search/maap_rawdata_visualization.ipynb
 
 
 
