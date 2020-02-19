@@ -14,6 +14,12 @@ Welcome to maap-docs's documentation!
   search/maap_rawdata_visualization.ipynb
 
 
+.. toctree::
+  :maxdepth: 2
+  :caption: Visualization:
+  
+  visualization/using_pycmc.ipynb
+  
 
 Indices and tables
 ==================
