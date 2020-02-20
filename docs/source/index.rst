@@ -12,6 +12,7 @@ Welcome to maap-docs's documentation!
 
   search/maap_collection_search.ipynb
   search/maap_rawdata_visualization.ipynb
+  search/cmr_collection_table.ipynb
 
 
 
