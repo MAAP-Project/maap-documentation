@@ -55,7 +55,8 @@ Assuming you have `conda` installed, this is how you set up your fork for local 
     $ git checkout -b username-name_of_feature
 
 Now you can make your changes locally.
-To do this, typically you create your notebook of the example you would like added to the documentation and save the notebook under the `maap-documentation/source/` directory. After the file has been saved, update the `index.rst` file to add the new documentation to the Table of Contents tree (toctree).
+To do this, typically you create your notebook of the example you would like added to the documentation and save the notebook under the `maap-documentation/docs/source/` directory. After the file has been saved, update the `index.rst` file to add the new documentation to the Table of Contents tree (toctree).
+Run the command `$ make html` within the `docs/` directory to build your HTML pages and verify the changes are correct.
 
 #### 5.  Commit your changes and push your branch to GitHub:
 
