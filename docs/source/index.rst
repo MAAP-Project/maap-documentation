@@ -10,8 +10,8 @@ Welcome to maap-docs's documentation!
   :maxdepth: 2
   :caption: Search:
 
-  search/maap_collection_search.ipynb
-  search/maap_rawdata_visualization.ipynb
+  search/collections.ipynb
+  search/granules.ipynb
   search/cmr_collection_table.ipynb
 
 
