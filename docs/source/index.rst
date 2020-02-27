@@ -15,6 +15,12 @@ Welcome to maap-docs's documentation!
   search/cmr_collection_table.ipynb
 
 
+.. toctree::
+  :maxdepth: 2
+  :caption: Visualization:
+  
+  visualization/using_pycmc.ipynb
+  
 
 Indices and tables
 ==================
