@@ -1,9 +1,0 @@
-channels:
-  - conda-forge
-  - defaults
-dependencies:
-  - matplotlib
-  - pip:
-    - ipykernel
-    - nbsphinx
-    - sphinxcontrib-napoleon

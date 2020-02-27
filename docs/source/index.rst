@@ -7,10 +7,20 @@ Welcome to maap-docs's documentation!
 =====================================
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+  :maxdepth: 2
+  :caption: Search:
+
+  search/collections.ipynb
+  search/granules.ipynb
+  search/cmr_collection_table.ipynb
 
 
+.. toctree::
+  :maxdepth: 2
+  :caption: Visualization:
+  
+  visualization/using_pycmc.ipynb
+  
 
 Indices and tables
 ==================
