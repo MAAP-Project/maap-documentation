@@ -22,6 +22,13 @@ Welcome to maap-docs's documentation!
   visualization/using_pycmc.ipynb
   
 
+.. toctree::
+  :maxdepth: 2
+  :caption: User Data:
+  
+  user_data/ndvi_cog_example.ipynb
+  
+
 Indices and tables
 ==================
 
