@@ -33,7 +33,6 @@ Welcome to maap-docs's documentation!
   :maxdepth: 2
   :caption: User Data:
   
-  user_data/ndvi_cog_example.ipynb
   user_data/sharing_data.ipynb
   
 
