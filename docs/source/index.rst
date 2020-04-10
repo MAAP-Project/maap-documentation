@@ -24,6 +24,13 @@ Welcome to maap-docs's documentation!
 
 .. toctree::
   :maxdepth: 2
+  :caption: Access:
+  
+  access/accessing_data.ipynb
+  
+  
+.. toctree::
+  :maxdepth: 2
   :caption: User Data:
   
   user_data/sharing_data.ipynb
