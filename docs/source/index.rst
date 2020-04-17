@@ -10,7 +10,6 @@ Welcome to maap-docs's documentation!
   :maxdepth: 2
   :caption: Search:
 
-  search/collections.ipynb
   search/granules.ipynb
   search/cmr_collection_table.ipynb
 
@@ -21,7 +20,7 @@ Welcome to maap-docs's documentation!
   
   visualization/using_pycmc.ipynb
   
-
+  
 .. toctree::
   :maxdepth: 2
   :caption: User Data:
