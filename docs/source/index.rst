@@ -32,7 +32,8 @@ Welcome to the MAAP User Documentation!
   :caption: Query:
   
   query/query_data_python.ipynb
-
+  query/gedi_calval_data_doc.ipynb
+  
   
 .. toctree::
   :maxdepth: 2
