@@ -29,6 +29,13 @@ Welcome to the MAAP User Documentation!
   
 .. toctree::
   :maxdepth: 2
+  :caption: Access:
+  
+  access/accessing_data.ipynb
+  
+ 
+.. toctree::
+  :maxdepth: 2
   :caption: Query:
   
   query/query_data_python.ipynb
