@@ -18,8 +18,9 @@ Welcome to the MAAP User Documentation!
 
   search/searching_edsc_gui
   search/granules.ipynb
+  search/searching_compiling_list_of_granule_ids.ipynb
   search/cmr_collection_table.ipynb
-
+  
 
 .. toctree::
   :maxdepth: 2
