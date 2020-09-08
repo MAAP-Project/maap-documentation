@@ -16,6 +16,7 @@ Welcome to the MAAP User Documentation!
   :maxdepth: 2
   :caption: Search:
 
+  search/searching_edsc_gui
   search/granules.ipynb
   search/cmr_collection_table.ipynb
 
