@@ -42,6 +42,7 @@ Welcome to the MAAP User Documentation!
   
   query/query_data_python.ipynb
   query/gedi_calval_data_doc.ipynb
+  query/testing-ept-stores.ipynb
   
   
 .. toctree::
