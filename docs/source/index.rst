@@ -10,6 +10,7 @@ Welcome to the MAAP User Documentation!
   :maxdepth: 2
   
   welcome.ipynb
+  git_clone_repo.ipynb
   
   
 .. toctree::
