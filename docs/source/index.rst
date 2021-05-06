@@ -29,6 +29,7 @@ Welcome to the MAAP User Documentation!
   :caption: Visualization:
   
   visualization/using_pycmc.ipynb
+  visualization/pycmc_3dtiles.ipynb  
   
   
 .. toctree::
