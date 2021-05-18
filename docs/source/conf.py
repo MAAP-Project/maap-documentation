@@ -57,7 +57,12 @@ html_theme = 'sphinx_rtd_theme'
 html_logo = "_static/nasamaap_logo.png"
 html_favicon = "_static/maapsheep-80x80.png"
 html_theme_options = {
-    'logo_only': True
+    'logo_only': True,
+	'collapse_navigation': True,
+    'sticky_navigation': True,
+    'navigation_depth': 4,
+    'includehidden': True,
+    'titles_only': False
 }
 
 # Add any paths that contain custom static files (such as style sheets) here,
