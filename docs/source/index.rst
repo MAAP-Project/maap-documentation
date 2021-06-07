@@ -7,11 +7,17 @@ Welcome to the MAAP User Documentation!
 =======================================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   
-  welcome.ipynb
-  git_clone_repo.ipynb
+  intro.rst
+  searching.rst
+  visualizing.rst 
+  accessing.rst
+  querying.rst
+  userdata.rst
+  faqs.rst
   
+<<<<<<< HEAD
   
 .. toctree::
   :maxdepth: 2
@@ -72,6 +78,8 @@ Welcome to the MAAP User Documentation!
   faq/import_granules.ipynb
   faq/rename_workspace.ipynb
   faq/share_workspace.ipynb
+=======
+>>>>>>> sayers-doc_improvements
 
 Indices and tables
 ==================
