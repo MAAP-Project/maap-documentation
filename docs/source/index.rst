@@ -54,7 +54,18 @@ Welcome to the MAAP User Documentation!
   :caption: User Data:
   
   user_data/sharing_data.ipynb
-  
+
+.. toctree::
+  :maxdepth: 2
+  :caption: ADE:
+
+  algorithm_development_env/create_project.ipynb  
+  algorithm_development_env/add_project.ipynb
+  algorithm_development_env/update_project.ipynb
+  algorithm_development_env/create_workspace.ipynb
+  algorithm_development_env/inline_magics.ipynb
+  algorithm_development_env/ssh.ipynb
+  algorithm_development_env/share_data.ipynb
 
 .. toctree::
   :maxdepth: 2
