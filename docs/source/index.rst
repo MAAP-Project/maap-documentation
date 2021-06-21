@@ -7,11 +7,21 @@ Welcome to the MAAP User Documentation!
 =======================================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   
+
+  intro.rst
+  searching.rst
+  visualizing.rst 
+  accessing.rst
+  querying.rst
+  userdata.rst
+  faqs.rst
+
   welcome.ipynb
   getting_started.ipynb
   git_clone_repo.ipynb
+
   
   
 .. toctree::
