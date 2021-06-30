@@ -6,11 +6,8 @@ name: Trigger GitLab CI
 # events but only for the master branch
 on:
   push:
-#     branches:
-#       - ab/trigger-gitlab-tests
-#     tags:
-#       - v*
-#       - stable
+    branches:
+      - ab/trigger-gitlab-tests
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
