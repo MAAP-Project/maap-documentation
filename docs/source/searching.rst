@@ -3,6 +3,7 @@ Search
 
 .. toctree::
   :maxdepth: 2
+  :caption: Search:
   
   search/searching_edsc_gui
   search/collections.ipynb
