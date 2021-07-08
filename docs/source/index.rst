@@ -16,6 +16,7 @@ Welcome to the MAAP User Documentation!
   querying.rst
   userdata.rst
   faqs.rst
+  platform_tech_docs.rst
 
 Indices and tables
 ==================
