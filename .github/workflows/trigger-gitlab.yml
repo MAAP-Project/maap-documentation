@@ -25,6 +25,11 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
+    - name: Extract branch name
+      shell: bash
+      run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+      id: extract_branch
+
     # Runs a set of commands using the runners shell
     - name: Trigger GitLab CI
       env:
@@ -36,5 +41,5 @@ jobs:
         curl -X POST \
            -F token=${GITLAB_CI_TRIGGER_TOKEN} \
            -F "ref=master" \
-           -F "variables[GITHUB_REF]=${GITHUB_REF##*/}" \
+           -F "variables[GITHUB_REF]=${{ steps.extract_branch.outputs.branch }}" \
            ${GITLAB_CI_TRIGGER_URL}
