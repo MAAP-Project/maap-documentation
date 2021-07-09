@@ -3,6 +3,7 @@ FAQ
 
 .. toctree::
   :maxdepth: 2
+  :caption: FAQ:
   
   faq/register_algorithm_to_mas.ipynb
   faq/check_dps_job_status.ipynb
