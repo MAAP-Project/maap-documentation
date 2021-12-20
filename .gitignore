@@ -2,3 +2,5 @@
 build/
 .ipynb_checkpoints
 mosaic.json
+*.tif
+*.zip
