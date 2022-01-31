@@ -1,5 +1,7 @@
 sphinx>=1.4
 pandoc
 nbconvert
-ipykernel
+ipykernel~=6.4.1
 nbsphinx
+sphinxcontrib-napoleon
+sphinx-rtd-theme
