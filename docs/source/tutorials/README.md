@@ -1,3 +1,3 @@
 README.md
 
-Location for all maap data tutorials
+Location for all MAAP dataset tutorials
