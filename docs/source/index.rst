@@ -15,7 +15,7 @@ Welcome to the MAAP User Documentation!
   accessing.rst
   querying.rst
   userdata.rst
-  tutorial.rst
+  tutorials.rst
   faqs.rst
   platform_tech_docs.rst
 
