@@ -6,4 +6,9 @@ Tutorials
   :caption: Tutorials:
 
 
-  tutorials/HLS_search.ipynb
+  tutorials/HLS/HLS_search.ipynb
+  tutorials/GEDI/EarthdataSearch.png
+  tutorials/GEDI/EDinterface.png
+  tutorials/GEDI/PasteResults.png
+  tutorials/GEDI/SearchGEDI.ipynb
+  tutorials/GEDI/Shenandoah_AOI.gpkg
