@@ -5,3 +5,4 @@ ipykernel~=6.4.1
 nbsphinx
 sphinxcontrib-napoleon
 sphinx-rtd-theme
+pystac-client~=0.3.2
