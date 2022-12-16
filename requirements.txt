@@ -6,3 +6,4 @@ nbsphinx
 sphinxcontrib-napoleon
 sphinx-rtd-theme
 pystac-client~=0.3.2
+h5py
