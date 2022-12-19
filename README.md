@@ -18,10 +18,17 @@ pip install -r requirements.txt
 After installing the necessary packages you build the docs using the following command from the docs directory:
 
 ```
+cd docs
 make html
 ```
 
 Once the docs have been built successfully, there should be a `build/` directory with the HTML pages.
+To verify the pages look as expected run a local python server.
+```
+cd build/html
+python3 -m http.server
+# If you are not prompted open a web browser and go to http://localhost:8000/ (default)
+```
 
 ## Running Notebooks Locally
 
