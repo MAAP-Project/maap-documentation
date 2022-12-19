@@ -7,3 +7,4 @@ Visualize
   
   visualization/using_pycmc.ipynb
   visualization/srtm-stac-mosaic.ipynb
+  visualization/ade_mosaic.ipynb

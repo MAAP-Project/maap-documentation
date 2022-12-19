@@ -23,7 +23,7 @@ make html
 ```
 
 Once the docs have been built successfully, there should be a `build/` directory with the HTML pages.
-To verify the pages look as exepected run a local python server.
+To verify the pages look as expected run a local python server.
 ```
 cd build/html
 python3 -m http.server
