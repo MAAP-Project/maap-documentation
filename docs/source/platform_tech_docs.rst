@@ -12,3 +12,4 @@ Platform Technical Documentation
   platform_technical_documentation/share_data.ipynb
   platform_technical_documentation/ssh.ipynb
   platform_technical_documentation/update_project.ipynb
+  platform_technical_documentation/jobsui.ipynb
