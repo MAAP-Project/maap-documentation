@@ -11,4 +11,4 @@ Tutorials
   tutorials/GEDI/SearchGEDI.ipynb
   tutorials/GEDI/GEDI_L3_tutorial.ipynb
   tutorials/GEDI/GEDI_L4A_Example.ipynb
-  tutorials/ATL03/IceSat_ATL03_Access.ipynb
+  tutorials/ATL03/IceSat_ATL03_Tutorials.ipynb
