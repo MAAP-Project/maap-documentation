@@ -2,7 +2,7 @@ Platform Technical Documentation
 =======================================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 3
   :caption: Platform Technical Documentation:
   
   platform_technical_documentation/add_project.ipynb
@@ -12,4 +12,4 @@ Platform Technical Documentation
   platform_technical_documentation/share_data.ipynb
   platform_technical_documentation/ssh.ipynb
   platform_technical_documentation/update_project.ipynb
-  platform_technical_documentation/jobsui.ipynb
+  ade_custom_extensions.rst
