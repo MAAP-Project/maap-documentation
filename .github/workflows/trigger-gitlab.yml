@@ -25,14 +25,6 @@ jobs:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
 
-    - name: Extract branch name
-      shell: bash
-      # $GITHUB_HEAD_REF is the source branch name
-      # $GITHUB_BASE_REF is the PR destination branch
-      # If we want to test that tests pass on the destination branch (e.g. master and develop) after merge, we probably want to add `master` and `develop` to the list of branches to run the CI on `push` and not just `pull_request`
-      run: echo "branch=$(echo ${GITHUB_REF#refs/heads/})" >>$GITHUB_OUTPUT
-      id: extract_branch
-
     # Runs a set of commands using the runners shell
     - name: Trigger GitLab CI
       env:
@@ -44,5 +36,5 @@ jobs:
         curl -X POST \
            -F token=${GITLAB_CI_TRIGGER_TOKEN} \
            -F "ref=master" \
-           -F "variables[GITHUB_REF]=${{ steps.extract_branch.outputs.branch }}" \
+           -F "variables[GITHUB_REF]=${{ github.head_ref || github.ref_name }}" \
            ${GITLAB_CI_TRIGGER_URL}
