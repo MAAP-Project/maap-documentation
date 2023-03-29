@@ -1,9 +1,9 @@
-Introduction
+Getting Started
 =======================================
 
 .. toctree::
   :maxdepth: 2
-  :caption: Introduction:
+  :caption: Getting Started:
   
   intro/welcome.ipynb
   intro/getting_started.ipynb

@@ -1,16 +1,13 @@
-Tutorials
+Technical Tutorials
 =======================================
 
 .. toctree::
   :maxdepth: 2
-  :caption: Tutorials:
+  :caption: Technical Tutorials:
 
 
-  tutorials/HLS/HLS_search.ipynb
-  tutorials/GEDI/GEDI02_A_tutorial.ipynb
-  tutorials/GEDI/GEDI02_B_tutorial.ipynb
-  tutorials/GEDI/SearchGEDI.ipynb
-  tutorials/GEDI/GEDI_L3_tutorial.ipynb
-  tutorials/GEDI/GEDI_L4A_Example.ipynb
-  tutorials/ATL03/IceSat_ATL03_Tutorials.ipynb
-  tutorials/NISAR/Nisar_access_explore.ipynb
+  technical_tutorials/tutorial_matrix.ipynb
+  technical_tutorials/searching.rst
+  technical_tutorials/visualizing.rst
+  technical_tutorials/accessing.rst
+  technical_tutorials/querying.rst
