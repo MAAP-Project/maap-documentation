@@ -17,7 +17,7 @@ More information on each catalog and migrating from MAAP's CMR is detailed below
 Migrating from MAAP's CMR
 =======================================
 
-If you're migrating code from using https://cmr.maap-project.org, we're here to help. The documentation below should support migrating to cmr.earthdata.nasa.gov and https://stac.maap-project.org. If not, please contact the data team for assistance.
+If you're migrating code from using https://cmr.maap-project.org, we're here to help. The documentation below should support migrating to https://cmr.earthdata.nasa.gov and https://stac.maap-project.org. If not, please contact the data team for assistance.
 
 Migration Steps:
 ----------------
@@ -122,6 +122,8 @@ CMR Discovery
 
 Users can discover data NASA's Operational CMR via its publicly accessible API: https://cmr.earthdata.nasa.gov and user interface: https://search.earthdata.nasa.gov.
 
+CMR Search documentation can be found in `Searching Collections <search/collections.ipynb>`_ and `Searching Granules <search/granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
+
 CMR Access
 ---------------------------------------
 
@@ -129,10 +131,8 @@ For all NASA MAAP users, access to NASA'S Operational data is provided via a fed
 
 Anyone can access data through Earthdata Login as well.
 
-CMR Documentation
----------------------------------------
+Find more documentation about how to access data in CMR in the `Access <accessing.html>`_ section of this documentation.
 
-CMR Search documentation can be found in `Searching Collections <search/collections.ipynb>`_ and `Searching Granules <search/granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
 
 .. toctree::
   :maxdepth: 2
