@@ -7,8 +7,8 @@ MAAP's Dual Catalog
 
 MAAP users are advised to use two catalogs:
 
-* NASA's Operational CMR: https://cmr.earthdata.nasa.gov
-* MAAP STAC: https://stac.maap-project.org
+1. NASA's Operational CMR: https://cmr.earthdata.nasa.gov
+2. MAAP STAC: https://stac.maap-project.org
 
 The https://cmr.maap-project.org catalog will be deprecated by **May 1, 2023**. Users should request collections they need from this catalog to be made discoverable in the MAAP STAC or NASA's Operational CMR if they're not already there.
 
@@ -50,6 +50,11 @@ This dataset exists in NASA's Operational CMR. Using https://search.earthdata.na
   pprint(f'Got {len(results)} results')
 
 
+<<<<<<< HEAD
+=======
+1. If the dataset is in MAAP STAC, you will need to use pystac_client (https://pystac-client.readthedocs.io/en/stable/) or a http library, if you prefer, to call the STAC HTTP API endpoints directly.
+
+>>>>>>> 3fa58611113c01e8e6a4f88b613ffedf22805add
 This code discovers granules from the ``Landsat 8 Operational Land Imager (OLI) Surface Reflectance Analysis Ready Data (ARD) V1, Peru and Equatorial Western Africa, April 2013-January 2020``.
 
 .. code-block:: python
@@ -125,7 +130,7 @@ Users can discover data NASA's Operational CMR via its publicly accessible API: 
 CMR Access
 ---------------------------------------
 
-For all NASA MAAP users, access to NASA'S Operational data is provided via a federated access token. Anything that is in NASA's Operational CMR should be accessed via maap-py so that the federated access token can be used. Users can also access data from LPDAAC (and possibly other DAACs in the future) without maap-py since the workspace should have access via a role-based bucket policy on the LPDAAC cloud bucket
+For all NASA MAAP users, access to NASA'S Operational data is provided via a federated access token. Anything that is in NASA's Operational CMR should be accessed via maap-py so that the federated access token can be used. Users can also access data from LPDAAC (and possibly other DAACs in the future) without maap-py since the workspace should have access via a role-based bucket policy on the LPDAAC cloud bucket.
 
 Anyone can access data through Earthdata Login as well.
 
