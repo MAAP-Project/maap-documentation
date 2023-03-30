@@ -7,8 +7,8 @@ MAAP's Dual Catalog
 
 There are 2 catalogs MAAP users are advised to use:
 
-* NASA's Operational CMR: https://cmr.earthdata.nasa.gov
-* MAAP STAC: https://stac.maap-project.org
+1. NASA's Operational CMR: https://cmr.earthdata.nasa.gov
+2. MAAP STAC: https://stac.maap-project.org
 
 https://cmr.maap-project.org will be deprecated by **May 1, 2023** so users are encouraged to request collections they need from https://cmr.maap-project.org to be made discoverable in stac.maap-project if they are not already there or in NASA's Operational CMR.
 
@@ -26,9 +26,9 @@ Migration Steps:
 
 1. Identify where in your code you are using https://cmr.maap-project.org and which datasets are being discovered and accessed.
 2. Once those datasets are identified, use https://search.earthdata.nasa.gov or https://stac-browser.maap-project.org to find out if that dataset is available through NASA's Operational CMR or MAAP's STAC catalog. You will probably use the collection title or ID to search. **If you don't see your datasets in one of those places, please reach out to the data team so we can prioritize that dataset for publication to MAAP STAC.** At time of writing, there are still 21 datasets in process of being published from MAAP's CMR to MAAP STAC.
-3. If the dataset is in NASA's Operational CMR and you are using MAAP's python library maap-py to discover and access data, you should be able to add the parameter ``cmr_host="cmr.earthdata.nasa.gov`` to your ``maap.searchCollection`` and ``maap.searchGranule`` function calls. In the near future, the default host for maap-py will be https://cmr.earthdata.nasa.gov, but we don't want to make that change until we know we won't be breaking any existing workflows. If you are using a ``concept_id`` to identify a specific collection or granule, you will also need to update the ``concept_id`` to match the ``concept_id`` from NASA's operational CMR.
+3. If the dataset is in NASA's Operational CMR and you are using MAAP's python library maap-py to discover and access data, you should be able to add the parameter ``cmr_host="cmr.earthdata.nasa.gov"`` to your ``maap.searchCollection`` and ``maap.searchGranule`` function calls. In the near future, the default host for maap-py will be https://cmr.earthdata.nasa.gov, but we don't want to make that change until we know we won't be breaking any existing workflows. If you are using a ``concept_id`` to identify a specific collection or granule, you will also need to update the ``concept_id`` to match the ``concept_id`` from NASA's operational CMR.
 
-For example, the code below discovers granules from the ``ABoVE LVIS L2 Geolocated Surface Elevation Product``:
+For example, the code below discovers granules from the ``ABoVE LVIS L2 Geolocated Surface Elevation Product`` using its concept_id:
 
 .. code-block:: python
 
@@ -49,7 +49,7 @@ This dataset exists in NASA's Operational CMR. Using https://search.earthdata.na
   pprint(f'Got {len(results)} results')
 
 
-1. If the dataset is in MAAP STAC, you will need to use [`pystac_client`](https://pystac-client.readthedocs.io/en/stable/) or any http library you prefer to call the API endpoints directly.
+1. If the dataset is in MAAP STAC, you will need to use pystac_client (https://pystac-client.readthedocs.io/en/stable/) or a http library, if you prefer, to call the STAC HTTP API endpoints directly.
 
 This code discovers granules from the ``Landsat 8 Operational Land Imager (OLI) Surface Reflectance Analysis Ready Data (ARD) V1, Peru and Equatorial Western Africa, April 2013-January 2020``.
 
@@ -96,7 +96,11 @@ An example of using pystac-client is included above and in search/searching_the_
 Data access via STAC
 ---------------------------------------
 
-Data published to STAC is still stored in ``s3://nasa-maap-data-store`` OR ESA's BMAP catalog and is accessible via public access or role-based bucket policy access. Each item should have a "data" asset which includes a URL to the data. For example, https://stac.maap-project.org/collections/BIOSAR1/items/biosar1_roi_lidar58 includes:
+Data assets (files) published to STAC have and will not move from the S3 bucket ``s3://nasa-maap-data-store``. ESA data is is accessible via public HTTP access. NASA data in S3 is accessible publicly or via role-based bucket policy access. 
+
+Users are encouraged to use common AWS S3 libraries for NASA data access, such as python's boto3.
+
+Each item should have a "data" asset which includes a URL to the data. For example, https://stac.maap-project.org/collections/BIOSAR1/items/biosar1_roi_lidar58 includes:
 
 .. code-block:: json
 
@@ -121,7 +125,7 @@ Users can discover data via it's publicly accessible API: https://cmr.earthdata.
 CMR Access
 ---------------------------------------
 
-For all NASA MAAP users, access to NASA'S Operational data is provided via a federated access token. Anything that is in NASA's Operational CMR should be accessed via maap-py so that the federated access token can be used. Users can also access data from LPDAAC (and possibly other DAACs in the future) without maap-py since the workspace should have access via a role-based bucket policy on the LPDAAC cloud bucket
+For all NASA MAAP users, access to NASA'S Operational data is provided via a federated access token. Anything that is in NASA's Operational CMR should be accessed via maap-py so that the federated access token can be used. Users can also access data from LPDAAC (and possibly other DAACs in the future) without maap-py since the workspace should have access via a role-based bucket policy on the LPDAAC cloud bucket.
 
 Anyone can access data through Earthdata Login as well.
 
