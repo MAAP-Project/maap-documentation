@@ -50,11 +50,6 @@ This dataset exists in NASA's Operational CMR. Using https://search.earthdata.na
   pprint(f'Got {len(results)} results')
 
 
-<<<<<<< HEAD
-=======
-1. If the dataset is in MAAP STAC, you will need to use pystac_client (https://pystac-client.readthedocs.io/en/stable/) or a http library, if you prefer, to call the STAC HTTP API endpoints directly.
-
->>>>>>> 3fa58611113c01e8e6a4f88b613ffedf22805add
 This code discovers granules from the ``Landsat 8 Operational Land Imager (OLI) Surface Reflectance Analysis Ready Data (ARD) V1, Peru and Equatorial Western Africa, April 2013-January 2020``.
 
 .. code-block:: python
