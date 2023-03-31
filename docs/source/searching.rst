@@ -30,6 +30,9 @@ Migration Steps:
 Examples:
 ----------------
 
+Example of switching a granule search to NASA's Operational CMR:
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 The code below discovers granules from the ``ABoVE LVIS L2 Geolocated Surface Elevation Product``:
 
 .. code-block:: python
@@ -49,6 +52,8 @@ This dataset exists in NASA's Operational CMR. Using https://search.earthdata.na
   )
   pprint(f'Got {len(results)} results')
 
+Example of switching a granule search to MAAP STAC:
++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This code discovers granules from the ``Landsat 8 Operational Land Imager (OLI) Surface Reflectance Analysis Ready Data (ARD) V1, Peru and Equatorial Western Africa, April 2013-January 2020``.
 
