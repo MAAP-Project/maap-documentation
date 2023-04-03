@@ -47,7 +47,7 @@ Assuming you have `conda` installed, this is how you set up your fork for local 
     $ conda create -n maap python=3.7
     $ conda activate maap
     $ cd maap-documentation/
-    $ pip install requirements.txt
+    $ pip install -r requirements.txt
 
 #### 4.  Create a branch for local development::
 
