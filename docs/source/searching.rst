@@ -11,3 +11,4 @@ Search
   search/searching_compiling_list_of_granule_ids.ipynb
   search/cmr_collection_table.ipynb
   search/deprecated_collection_table.ipynb
+  search/searching_the_stac_catalog.ipynb
