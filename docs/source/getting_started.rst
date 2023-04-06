@@ -5,8 +5,9 @@ Getting Started
   :maxdepth: 2
   :caption: Getting Started:
   
-  intro/about_maap.ipynb
-  intro/maap_overview.ipynb
-  intro/getting_started.ipynb
-  intro/writing_code.ipynb
-  intro/running_at_scale.ipynb
+  getting_started/about_maap.ipynb
+  getting_started/maap_overview.ipynb
+  getting_started/getting_started.ipynb
+  getting_started/writing_code.ipynb
+  getting_started/running_at_scale.ipynb
+
