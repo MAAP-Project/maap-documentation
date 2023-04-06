@@ -14,4 +14,4 @@ System Reference Guide
   system_reference_guide/update_project.ipynb
   system_reference_guide/custom-environments.ipynb
   system_reference_guide/ade_custom_extensions.rst
-  faqs.rst
+  system_reference_guide/faqs.rst
