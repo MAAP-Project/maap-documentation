@@ -12,5 +12,5 @@ Science Examples
   science/GEDI/SearchGEDI.ipynb
   science/GEDI/GEDI_L3_tutorial.ipynb
   science/GEDI/GEDI_L4A_Example.ipynb
-  science/ATL03/IceSat_ATL03_science.ipynb
+  science/ATL03/IceSat_ATL03_Tutorials.ipynb
   science/NISAR/Nisar_access_explore.ipynb

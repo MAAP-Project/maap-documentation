@@ -5,6 +5,6 @@ Getting Started
   :maxdepth: 2
   :caption: Getting Started:
   
-  intro/welcome.ipynb
-  intro/getting_started.ipynb
-  intro/git_clone_repo.ipynb
+  getting_started/welcome.ipynb
+  getting_started/getting_started.ipynb
+  getting_started/git_clone_repo.ipynb
