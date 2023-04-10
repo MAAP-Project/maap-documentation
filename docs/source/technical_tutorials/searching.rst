@@ -2,9 +2,14 @@
 Search
 =======================================
 
-MAAP provides access to data in NASA's Operational CMR (Common Metadata Repository, https://cmr.earthdata.nasa.gov) and a MAAP-managed STAC catalog (https://stac.maap-project.org).
+MAAP users are advised to use two catalogs:
 
-Please review `MAAP's Dual Catalog <search/catalog.html>`_ about how to use both catalogs and how to migrate code from https://cmr.maap-project.org, which will be deprecated May 1, 2023. 
+1. Use NASA's Operational CMR to discover NASA-produced and curated data: https://cmr.earthdata.nasa.gov
+2. Use MAAP STAC for data not found in NASA CMR, and data produced by MAAP users: https://stac.maap-project.org
+
+The https://cmr.maap-project.org catalog will be deprecated by **May 1, 2023**. Users should request collections they need from this catalog to be made discoverable in the MAAP STAC or NASA's Operational CMR if they're not already there.
+
+More information on each catalog and migrating from MAAP's CMR here: `MAAP's Dual Catalog </search/catalog.html>`_. 
 
 .. toctree::
   :maxdepth: 2

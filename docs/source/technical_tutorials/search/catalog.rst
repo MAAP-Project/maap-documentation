@@ -8,7 +8,7 @@ MAAP users are advised to use two catalogs:
 
 The https://cmr.maap-project.org catalog will be deprecated by **May 1, 2023**. Users should request collections they need from this catalog to be made discoverable in the MAAP STAC or NASA's Operational CMR if they're not already there.
 
-More information on each catalog and migrating from MAAP's CMR is detailed below.
+More information on each catalog and migrating from MAAP's CMR is detailed in the bottom of this page.
 
 =======================================
 MAAP STAC
