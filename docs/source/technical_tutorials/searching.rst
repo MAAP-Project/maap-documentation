@@ -16,7 +16,7 @@ More information on each catalog and migrating from MAAP's CMR here: `MAAP's Dua
   :caption: Search Topics:
   
   search/catalog.rst
-  search/searching_edsc_gui
+  search/searching_edsc_gui.ipynb
   search/collections.ipynb
   search/granules.ipynb
   search/searching_compiling_list_of_granule_ids.ipynb
