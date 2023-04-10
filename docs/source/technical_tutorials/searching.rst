@@ -20,7 +20,5 @@ More information on each catalog and migrating from MAAP's CMR here: `MAAP's Dua
   search/collections.ipynb
   search/granules.ipynb
   search/searching_compiling_list_of_granule_ids.ipynb
-  search/cmr_collection_table.ipynb
-  search/deprecated_collection_table.ipynb
   search/searching_the_stac_catalog.ipynb
 
