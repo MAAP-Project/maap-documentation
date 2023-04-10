@@ -2,7 +2,7 @@ Science Examples
 =======================================
 
 .. toctree::
-  :maxdepth: 2
+  :maxdepth: 1
   :caption: Science Examples:
 
 
@@ -14,4 +14,5 @@ Science Examples
   science/GEDI/GEDI_L4A_Example.ipynb
   science/GEDI/GEDI_L4B.ipynb 
   science/ATL03/IceSat_ATL03_Tutorials.ipynb
+  science/ATL08/IceSat_ATL08_Tutorials.ipynb
   science/NISAR/Nisar_access_explore.ipynb
