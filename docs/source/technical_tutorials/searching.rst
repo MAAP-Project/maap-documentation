@@ -13,7 +13,7 @@ More information on each catalog and migrating from MAAP's CMR here: `MAAP's Dua
 
 .. toctree::
   :maxdepth: 2
-  :caption: Search:
+  :caption: Search Topics:
   
   search/catalog.rst
   search/searching_edsc_gui
