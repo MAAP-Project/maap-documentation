@@ -1,11 +1,11 @@
 sphinx>=1.4
 pandoc
 nbconvert
-ipykernel~=6.4.1
+ipykernel>=6.4.1
 nbsphinx
 sphinxcontrib-napoleon
 sphinx-rtd-theme
-pystac-client~=0.3.2
+pystac-client>=0.6.0
 h5py
 folium
 pandas
