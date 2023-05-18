@@ -15,3 +15,4 @@ Science Examples
   science/GEDI/GEDI_L4B.ipynb 
   science/ATL03/IceSat_ATL03_Tutorials.ipynb
   science/NISAR/Nisar_access_explore.ipynb
+  science/AfriSAR_AGB_1681/AfriSAR_AGB_Maps_1681.ipynb
