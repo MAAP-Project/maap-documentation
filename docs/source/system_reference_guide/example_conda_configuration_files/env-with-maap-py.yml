@@ -1,4 +1,4 @@
-name: env4
+name: env-with-maap-py
 channels:
   - conda-forge
 dependencies:

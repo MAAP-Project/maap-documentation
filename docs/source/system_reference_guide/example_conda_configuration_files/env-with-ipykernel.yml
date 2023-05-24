@@ -1,4 +1,4 @@
-name: env3
+name: env-with-ipykernel
 channels:
   - conda-forge
 dependencies:
