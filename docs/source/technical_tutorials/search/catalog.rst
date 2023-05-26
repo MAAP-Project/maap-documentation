@@ -4,7 +4,7 @@ MAAP's Dual Catalog
 MAAP users are advised to use two catalogs:
 
 1. Use NASA's Operational CMR to discover NASA-produced and curated data: https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
-2. Use MAAP STAC for data not found in NASA CMR, and data produced by MAAP users: https://stac.maap-project.org/docs.
+2. Use MAAP STAC for data not found in NASA CMR, and data produced by MAAP users: https://stac.maap-project.org/api.html.
 
 .. warning::
 	The https://cmr.maap-project.org catalog will be deprecated by **May 1, 2023**. Users should request collections they need from this catalog to be made discoverable in the MAAP STAC or NASA's Operational CMR if they're not already there.
@@ -22,7 +22,7 @@ STAC discovery
 
 Users can discover data in MAAP STAC using pystac-client or https://stac-browser.maap-project.org.
 
-API documentation is available here: https://stac.maap-project.org/docs (will return MAAP STAC results).
+API documentation is available here: https://stac.maap-project.org/api.html (will return MAAP STAC results).
 
 The general STAC API spec is here: https://api.stacspec.org/v1.0.0-rc.1/core/.
 
