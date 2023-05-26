@@ -14,4 +14,4 @@ Science Examples
   science/GEDI/GEDI_L4B.ipynb 
   science/ATL03/ATL03.ipynb
   science/NISAR/Nisar_access.ipynb
-  science/AfriSAR_AGB_1681/AfriSAR_AGB_Maps_1681.ipynb
+  science/AfriSAR/AfriSAR_AGB.ipynb
