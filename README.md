@@ -7,7 +7,9 @@ This repository serves as the technical documentation for interfacing with the M
 
 MAAP documentation is hosted on [maap-project.readthedocs.io](https://maap-project.readthedocs.io), is built using [Sphinx](http://www.sphinx-doc.org/en/master/index.html) and written in [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html). If you want to contribute to the documentation, you can do so by forking the repository, creating a branch for your changes and editing the documentation files in the docs directory of the repo.
 
-This should be built using Python 3.7.
+This should be built using Python >=3.11.
+
+OS-version of [Pandoc](https://pandoc.org/) is also required.
 
 You need to install Sphinx and supporting packages locally so that you can make sure that your edits show up correctly before you make a pull request to the repo. To do this run the following command:
 
