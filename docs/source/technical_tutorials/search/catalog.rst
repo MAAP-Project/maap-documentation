@@ -60,7 +60,7 @@ CMR Discovery
 
 Users can discover data NASA's Operational CMR via its publicly accessible API: https://cmr.earthdata.nasa.gov and user interface: https://search.earthdata.nasa.gov.
 
-CMR Search documentation can be found in `Searching Collections <search/collections.ipynb>`_ and `Searching Granules <search/granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
+CMR Search documentation can be found in `Searching Collections <collections.ipynb>`_ and `Searching Granules <granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
 
 CMR Access
 ---------------------------------------
@@ -69,7 +69,7 @@ For all NASA MAAP users, access to NASA'S Operational data is provided via a fed
 
 Anyone can access data through Earthdata Login as well.
 
-Find more documentation about how to access data in CMR in the `Access <accessing.html>`_ section of this documentation.
+Find more documentation about how to access data in CMR in the `Access <access>`_ section of this documentation.
 
 =======================================
 Migrating from MAAP's CMR
