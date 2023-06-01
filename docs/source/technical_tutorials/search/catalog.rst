@@ -26,7 +26,7 @@ API documentation is available here: https://stac.maap-project.org/api.html (wil
 
 The general STAC API spec is here: https://api.stacspec.org/v1.0.0-rc.1/core/.
 
-An example of using pystac-client is included above and in `Searching STAC Documentation <docs/source/technical_tutorials/search/searching_the_stac_catalog.ipynb>`_.
+An example of using pystac-client is included above and in `Searching STAC Documentation <maap-documentation/docs/source/technical_tutorials/search/searching_the_stac_catalog.ipynb>`_.
 
 Data Access via STAC
 ---------------------------------------
