@@ -26,7 +26,7 @@ API documentation is available here: https://stac.maap-project.org/api.html (wil
 
 The general STAC API spec is here: https://api.stacspec.org/v1.0.0-rc.1/core/.
 
-An example of using pystac-client is included above and in `Searching STAC Documentation <search/searching_the_stac_catalog.ipynb>`_.
+An example of using pystac-client is included above and in `Searching STAC Documentation <searching_the_stac_catalog.ipynb>`_.
 
 Data Access via STAC
 ---------------------------------------
@@ -60,7 +60,7 @@ CMR Discovery
 
 Users can discover data NASA's Operational CMR via its publicly accessible API: https://cmr.earthdata.nasa.gov and user interface: https://search.earthdata.nasa.gov.
 
-CMR Search documentation can be found in `Searching Collections <search/collections.ipynb>`_ and `Searching Granules <search/granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
+CMR Search documentation can be found in `Searching Collections <collections.ipynb>`_ and `Searching Granules <granules.ipynb>`_ and https://cmr.earthdata.nasa.gov/search/site/docs/search/api.html.
 
 CMR Access
 ---------------------------------------
@@ -69,7 +69,7 @@ For all NASA MAAP users, access to NASA'S Operational data is provided via a fed
 
 Anyone can access data through Earthdata Login as well.
 
-Find more documentation about how to access data in CMR in the `Access <accessing.html>`_ section of this documentation.
+Find more documentation about how to access data in CMR in the `Access <../accessing.html>`_ section of this documentation.
 
 =======================================
 Migrating from MAAP's CMR
