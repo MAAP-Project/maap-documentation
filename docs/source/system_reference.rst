@@ -12,6 +12,5 @@ System Reference Guide
   system_reference_guide/ssh.ipynb
   system_reference_guide/update_project.ipynb
   system_reference_guide/custom-environments.ipynb
-  system_reference_guide/examples-environment-configuration-files.ipynb
   system_reference_guide/ade_custom_extensions.rst
   system_reference_guide/faq.rst
