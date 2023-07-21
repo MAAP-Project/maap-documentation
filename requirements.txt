@@ -10,3 +10,4 @@ h5py
 folium
 pandas
 rioxarray
+sphinx-copybutton
