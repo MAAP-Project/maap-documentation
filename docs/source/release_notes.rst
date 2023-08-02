@@ -4,7 +4,7 @@ Release Notes
 -------------------------------------------------------------
 3.1.0
 -------------------------------------------------------------
-| August 2, 2023
+| August 4, 2023
 | Hotfix to handle bugs that make working in the “new” ops ADE difficult
 
 
