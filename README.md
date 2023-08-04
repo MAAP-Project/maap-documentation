@@ -11,7 +11,9 @@ This should be built using Python >=3.11.
 
 OS-version of [Pandoc](https://pandoc.org/) is also required.
 
-You need to install Sphinx and supporting packages locally so that you can make sure that your edits show up correctly before you make a pull request to the repo. To do this run the following command:
+You need to install Sphinx and supporting packages locally so that you can make sure that your edits show up correctly before you make a pull request to the repo. These steps must be done locally since MAAP's ADE does not support running a server, and likely will not in the future.
+
+To install supporting packages, run the following command:
 
 ```
 pip install -r requirements.txt
@@ -26,6 +28,7 @@ make html
 
 Once the docs have been built successfully, there should be a `build/` directory with the HTML pages.
 To verify the pages look as expected run a local python server.
+
 ```
 cd build/html
 python3 -m http.server
