@@ -10,6 +10,7 @@ Release Notes
 
 Added
 ^^^^^^
+* Added more capacity to the new ADE cluster to support more concurrent users.
 Fixed
 ^^^^^^
 * Error with cursor jumping around in Jupyter & Opening blank notebook error (disable Jupyter collaboration feature): https://github.com/MAAP-Project/Community/issues/735 
