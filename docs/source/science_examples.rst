@@ -15,3 +15,4 @@ Science Examples
   science/ATL03/ATL03.ipynb
   science/NISAR/NISAR_access.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
+  science/LVIS/accessing_LVIS_data.ipynb
