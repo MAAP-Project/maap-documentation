@@ -13,3 +13,4 @@ Platform Technical Documentation
   platform_technical_documentation/ssh.ipynb
   platform_technical_documentation/update_project.ipynb
   platform_technical_documentation/jobsui.ipynb
+  platform_technical_documentation/algorithm_registration.ipynb
