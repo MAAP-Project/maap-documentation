@@ -21,7 +21,7 @@ def setup(app):
 # -- Project information -----------------------------------------------------
 
 project = 'maap-docs'
-copyright = '2020, NASA MAAP Team'
+copyright = '2020-2023, NASA MAAP Team'
 author = 'NASA MAAP Team'
 
 
@@ -32,6 +32,8 @@ author = 'NASA MAAP Team'
 # ones.
 extensions = [
     'nbsphinx',
+    'IPython.sphinxext.ipython_console_highlighting',
+    'sphinx_copybutton'
 ]
 
 nbsphinx_execute = 'never'

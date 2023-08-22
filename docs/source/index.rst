@@ -9,15 +9,11 @@ Welcome to the MAAP User Documentation!
 .. toctree::
   :maxdepth: 1
   
-  intro.rst
-  searching.rst
-  visualizing.rst 
-  accessing.rst
-  querying.rst
-  userdata.rst
-  tutorials.rst
-  faqs.rst
-  platform_tech_docs.rst
+  getting_started.rst
+  science_examples.rst
+  technical_tutorials.rst
+  system_reference.rst
+  release_notes.rst
 
 Indices and tables
 ==================
