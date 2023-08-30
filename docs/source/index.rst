@@ -13,6 +13,7 @@ Welcome to the MAAP User Documentation!
   science_examples.rst
   technical_tutorials.rst
   system_reference.rst
+  release_notes.rst
 
 Indices and tables
 ==================
