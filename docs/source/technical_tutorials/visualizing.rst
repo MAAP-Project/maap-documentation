@@ -5,7 +5,6 @@ Visualize
   :maxdepth: 2
   :caption: Visualize:
   
-  visualization/srtm-stac-mosaic.ipynb
+  visualization/visualizing_mosaicjson.ipynb
   visualization/interval_color_mapping.ipynb
-  visualization/ade_mosaic.ipynb
   visualization/stac_ipyleaflet.ipynb
