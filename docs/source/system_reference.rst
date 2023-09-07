@@ -5,8 +5,6 @@ System Reference Guide
   :maxdepth: 2
   :caption: System Reference Guide:
   
-  system_reference_guide/add_project.ipynb
-  system_reference_guide/create_project.ipynb
   system_reference_guide/create_workspace.ipynb
   system_reference_guide/share_data.ipynb
   system_reference_guide/ssh.ipynb
