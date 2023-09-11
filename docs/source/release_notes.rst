@@ -11,6 +11,7 @@ Release Notes
 Added
 ^^^^^^^^^^^^
 * Added more capacity to the new ADE cluster to support more concurrent users.
+
 Fixed
 ^^^^^^^^^^^^
 * Error with cursor jumping around in Jupyter & Opening blank notebook error (disable Jupyter collaboration feature): https://github.com/MAAP-Project/Community/issues/735 
@@ -21,6 +22,7 @@ Fixed
 * Api_server now present in MAAP() instance (changing use of maapsec): https://github.com/MAAP-Project/Community/issues/781 
 * Open SSL fix: https://github.com/MAAP-Project/Community/issues/737 
 * Update Jupyter server to include API endpoints: https://github.com/MAAP-Project/Community/issues/685 
+
 Changed
 ^^^^^^^^^^^^
 Removed
