@@ -41,8 +41,6 @@ To run the documentation notebook code, you must make several configurations.
 
 Install JupyterHub. 
 
-Install the [ipycmc](https://github.com/MAAP-Project/maap-jupyter-ide/tree/master/ipycmc) extension.
-
 Install the `maap-py` library.
 
 1. Switch to your virtual environment that you wish to install in.
