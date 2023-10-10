@@ -3,7 +3,6 @@ Technical Tutorials
 
 .. toctree::
   :maxdepth: 2
-  :caption: Technical Tutorials:
 
 
   technical_tutorials/searching.rst
