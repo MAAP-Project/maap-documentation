@@ -3,3 +3,4 @@ build/
 .ipynb_checkpoints
 mosaic.json
 *.h5
+*venv/
