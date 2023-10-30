@@ -42,7 +42,7 @@ For example, https://stac.maap-project.org/collections/BIOSAR1/items/biosar1_roi
 .. code-block:: json
 
   "assets": {
-    "data": {
+    "shx": {
       "href": "https://bmap-catalogue-data.oss.eu-west-0.prod-cloud-ocb.orange-business.com/Campaign_data/biosar1/biosar1_roi_lidar58.shx",
       "type": "application/octet-stream",
       "roles": [
