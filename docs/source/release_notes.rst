@@ -10,10 +10,10 @@ Release Notes
 
 Added
 ^^^^^^^^^^^^
-* Capability to stop running jobs from the MAAP API (maap-py maap.cancelJob("id")): https://github.com/MAAP-Project/Community/issues/640
-* New maap-py method aws.workspace_bucket_credentials() for accessing user workspace bucket from outside the ADE: https://github.com/MAAP-Project/Community/issues/825
-* Jobs UI: expose the entire stderr: https://github.com/MAAP-Project/Community/issues/651
-* maap-py: add maap.downloadGranule() direct download of Earthdata Cloud URLs: https://github.com/MAAP-Project/Community/issues/515
+* Capability to stop running jobs from the MAAP API (maap-py ``maap.cancelJob("id")``): https://github.com/MAAP-Project/Community/issues/640
+* New maap-py method ``aws.workspace_bucket_credentials()`` for accessing user workspace bucket from outside the ADE: https://github.com/MAAP-Project/Community/issues/825
+* Jobs UI: expose the entire stderr; split "View" and "Submit" into two tabs: https://github.com/MAAP-Project/Community/issues/651
+* maap-py: add ``maap.downloadGranule()`` direct download of Earthdata Cloud URLs: https://github.com/MAAP-Project/Community/issues/515
 * Add 'listContainer' support to MAAP API and maap-py: https://github.com/MAAP-Project/Community/issues/818
 
 Fixed
