@@ -19,7 +19,6 @@ Added
 Fixed
 ^^^^^^^^^^^^
 * Removed 5-second delay when submitting jobs to DPS. 
-* Fixed maap-py.deleteAlgorithm() 404 error.
 
 Changed
 ^^^^^^^^^^^^
