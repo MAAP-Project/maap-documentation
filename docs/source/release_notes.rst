@@ -2,6 +2,30 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+3.1.4
+-------------------------------------------------------------
+| January 19, 2024
+| Minor feature additions and bug fixes.
+
+
+Added
+^^^^^^^^^^^^
+* asdf: https://github.com/MAAP-Project/Community/issues/640
+
+Fixed
+^^^^^^^^^^^^
+* asdf: https://github.com/MAAP-Project/Community/issues/762
+
+Changed
+^^^^^^^^^^^^
+* asdf: https://github.com/MAAP-Project/Community/issues/649
+
+Removed
+^^^^^^^^^^^^
+* asdf: https://github.com/MAAP-Project/Community/issues/821
+
+
+-------------------------------------------------------------
 3.1.3
 -------------------------------------------------------------
 | November 2, 2023
