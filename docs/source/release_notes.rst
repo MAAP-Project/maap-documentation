@@ -13,13 +13,14 @@ Added
 * Log rotation for MAAP API: https://github.com/MAAP-Project/Community/issues/887
 * Added Figaro shared workspace: https://github.com/MAAP-Project/Community/issues/754
 * Added new packages to workspaces: https://github.com/MAAP-Project/Community/issues/729, https://github.com/MAAP-Project/Community/issues/743, https://github.com/MAAP-Project/Community/issues/742
+* Submit Job button disables after submit to prevent users double submitting jobs: https://github.com/MAAP-Project/Community/issues/663
 
 Fixed
 ^^^^^^^^^^^^
 * Resolved UWG-reported workspace sluggishness: https://github.com/MAAP-Project/Community/issues/877, https://github.com/MAAP-Project/Community/issues/807
-* Fixed double-submit errors in the Jobs UI: https://github.com/MAAP-Project/Community/issues/663
 * Resolved libarchive error: https://github.com/MAAP-Project/Community/issues/860
 * Resolved maap-py package dependency issues: https://github.com/MAAP-Project/Community/issues/885
+* Fixed bug where username was not attached to job unless you opened the View Jobs tab before submitting: https://github.com/MAAP-Project/Community/issues/866
 
 Changed
 ^^^^^^^^^^^^
