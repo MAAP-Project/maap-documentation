@@ -11,7 +11,7 @@ Release Notes
 Added
 ^^^^^^^^^^^^
 * Log rotation for MAAP API: https://github.com/MAAP-Project/Community/issues/887
-* Added Figaro shared workspace: https://github.com/MAAP-Project/Community/issues/754
+* Added dps-job-management shared workspace to track job status: https://github.com/MAAP-Project/Community/issues/754
 * Added new packages to workspaces: https://github.com/MAAP-Project/Community/issues/729, https://github.com/MAAP-Project/Community/issues/743, https://github.com/MAAP-Project/Community/issues/742
 * Submit Job button disables after submit to prevent users double submitting jobs: https://github.com/MAAP-Project/Community/issues/663
 
