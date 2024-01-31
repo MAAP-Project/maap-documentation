@@ -15,3 +15,4 @@ System Reference Guide
   system_reference_guide/work_with_git.ipynb
   system_reference_guide/ade_custom_extensions.rst
   system_reference_guide/faq.rst
+  

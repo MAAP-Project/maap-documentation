@@ -6,5 +6,6 @@ Visualize
   :caption: Visualize:
   
   visualization/visualizing_mosaicjson.ipynb
+  visualization/visualize_mosaic_stac_ipyleaflet.ipynb
   visualization/interval_color_mapping.ipynb
   visualization/stac_ipyleaflet.ipynb

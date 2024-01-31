@@ -16,3 +16,5 @@ Science Examples
   science/NISAR/NISAR_access.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
+  science/ESA_CCI/ESA_CCI_V4.ipynb
+  science/oss_documentation.rst
