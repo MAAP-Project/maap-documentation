@@ -6,7 +6,7 @@ from memory_profiler import profile
 
 @profile
 
-def code_to_profile():
+def my_function():
     # Include each line of the script which needs to be profiled
     # under this function
     print("Hello, world!")
@@ -14,4 +14,4 @@ def code_to_profile():
     return 0
 
 if __name__ == "__main__":
-    code_to_profile()
+    my_function()
