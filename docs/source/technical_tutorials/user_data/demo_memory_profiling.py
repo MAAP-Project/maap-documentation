@@ -5,7 +5,6 @@ from memory_profiler import profile
 """
 
 @profile
-
 def my_function():
     # Include each line of the script which needs to be profiled
     # under this function
