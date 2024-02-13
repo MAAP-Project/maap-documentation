@@ -1,7 +1,4 @@
 from memory_profiler import profile
-"""
-... Code here
-"""
 
 @profile
 def my_function():

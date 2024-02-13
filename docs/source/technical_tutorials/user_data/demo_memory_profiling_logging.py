@@ -1,7 +1,5 @@
 from memory_profiler import profile
-"""
-... Code here
-"""
+
 fp=open('memory_profiler.log','w+')
 @profile(stream=fp)
 def my_function():
