@@ -1,8 +1,0 @@
-name: env4
-channels:
-    - conda-forge
-dependencies:
-    - python=3.9
-    - pip=23.0.1
-    - pip:
-        - git+https://git@github.com/MAAP-Project/maap-py@d0f34e3440bf1121882892a5fe0b20484b413d43

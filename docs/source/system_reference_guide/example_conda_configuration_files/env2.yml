@@ -1,9 +1,0 @@
-name: env2
-channels:
-	- conda-forge
-dependencies:
-	- python=3.9
-	- xarray=2023.3.0
-	- pip=23.0.1
-	- pip:
-		- stackstac==0.4.3

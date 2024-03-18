@@ -1,0 +1,6 @@
+name: base
+channels:
+  - conda-forge
+dependencies:
+  - xarray=2023.3.0
+  - geopandas=0.12.2
