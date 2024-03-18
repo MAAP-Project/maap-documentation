@@ -11,8 +11,9 @@ Science Examples
   science/GEDI/GEDI_L2B.ipynb
   science/GEDI/GEDI_L3.ipynb
   science/GEDI/GEDI_L4A.ipynb
-  science/GEDI/GEDI_L4B.ipynb 
+  science/GEDI/GEDI_L4B.ipynb
   science/ATL03/ATL03.ipynb
+  science/ATL08/ATL08.ipynb
   science/NISAR/NISAR_access.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
