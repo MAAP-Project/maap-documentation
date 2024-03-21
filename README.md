@@ -1,5 +1,5 @@
 # maap-documentation
-[![Documentation Status](https://readthedocs.org/projects/maap-project/badge/?version=latest)](https://maap-project.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/maap-project/badge/?version=latest)](https://maap-project.readthedocs.io/en/latest/?badge=latest) [![DOI](https://zenodo.org/badge/235617200.svg)](https://zenodo.org/doi/10.5281/zenodo.10499174)
 
 This repository serves as the technical documentation for interfacing with the MAAP services.
 
