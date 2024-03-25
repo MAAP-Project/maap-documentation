@@ -39,6 +39,7 @@ Changed
 ^^^^^^^^^^^^
 * rio_tiler package now in base image so available for DPS images: https://github.com/MAAP-Project/Community/issues/929
 * Removed ability to navigate to /search from our homepage: https://github.com/MAAP-Project/Community/issues/924
+* Removed rgedi and isce2 workspaces: https://github.com/MAAP-Project/Community/issues/893
 
 
 -------------------------------------------------------------
