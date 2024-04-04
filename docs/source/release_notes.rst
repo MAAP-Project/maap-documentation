@@ -18,7 +18,6 @@ Added
 * Added stac_ipyleaflet to all ADE images: https://github.com/MAAP-Project/Community/issues/884
 * Upgraded PHP to 8.x: https://github.com/MAAP-Project/Community/issues/921
 * Upgraded WordPress to 6.4.3 and disabled auto updates: https://github.com/MAAP-Project/Community/issues/899, https://github.com/MAAP-Project/Community/issues/912
-* Removed the need for tracking maap.cfg file location: https://github.com/MAAP-Project/Community/issues/909
 * New algorithm UI frontend jupyter extension: https://github.com/MAAP-Project/Community/issues/686, https://github.com/MAAP-Project/Community/issues/832
 * EBS encryption on all instances in MCP: https://github.com/MAAP-Project/Community/issues/892
 * All jupyter extensions now available on pip: https://github.com/MAAP-Project/Community/issues/817
