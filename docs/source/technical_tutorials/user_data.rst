@@ -6,3 +6,4 @@ User Data
   :caption: User Data:
   
   user_data/create-datasets-for-dashboard.ipynb
+  user_data/memory-profiling-python.ipynb

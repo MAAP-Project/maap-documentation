@@ -2,6 +2,46 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+3.1.5
+-------------------------------------------------------------
+| April 1, 2024
+| Minor feature additions and bug fixes.
+
+
+Added
+^^^^^^^^^^^^
+* Open in file browser button for output of completed jobs in Jobs UI: https://github.com/MAAP-Project/Community/issues/656
+* Bug submission reporting new option for help menu: https://github.com/MAAP-Project/Community/issues/302
+* Cancel/dismiss a job from the Jobs UI: https://github.com/MAAP-Project/Community/issues/753
+* Added more packages to pangeo/r images: https://github.com/MAAP-Project/Community/issues/898, https://github.com/MAAP-Project/Community/issues/902
+* Implemented cache for /edcCredentials: https://github.com/MAAP-Project/Community/issues/910
+* Added stac_ipyleaflet to all ADE images: https://github.com/MAAP-Project/Community/issues/884
+* Upgraded PHP to 8.x: https://github.com/MAAP-Project/Community/issues/921
+* Upgraded WordPress to 6.4.3 and disabled auto updates: https://github.com/MAAP-Project/Community/issues/899, https://github.com/MAAP-Project/Community/issues/912
+* New algorithm UI frontend jupyter extension: https://github.com/MAAP-Project/Community/issues/686, https://github.com/MAAP-Project/Community/issues/832
+* EBS encryption on all instances in MCP: https://github.com/MAAP-Project/Community/issues/892
+* All jupyter extensions now available on pip: https://github.com/MAAP-Project/Community/issues/817
+
+Fixed
+^^^^^^^^^^^^
+* SSH key uploads fixed: https://github.com/MAAP-Project/Community/issues/850
+* Link updates for MAAP API and MAAP logo in help menu: https://github.com/MAAP-Project/Community/issues/920, https://github.com/MAAP-Project/Community/issues/945
+* Buttons for Jobs UI no longer remain grayed out after click: https://github.com/MAAP-Project/Community/issues/911
+* Jobs inputs numbers now appear properly in Jobs UI Inputs tab: https://github.com/MAAP-Project/Community/issues/858
+* Duplicate Job tag in Jobs UI resolved: https://github.com/MAAP-Project/Community/issues/797 
+* Mounting for triaged-jobs folder: https://github.com/MAAP-Project/Community/issues/933
+* Added missing dependency for awscli: https://github.com/MAAP-Project/Community/issues/938
+* Fixed triaged-jobs s3fs mapping: https://github.com/MAAP-Project/Community/issues/932
+* Shared buckets no longer dropping frequently: https://github.com/MAAP-Project/Community/issues/759
+
+Changed
+^^^^^^^^^^^^
+* rio_tiler package now in base image so available for DPS images: https://github.com/MAAP-Project/Community/issues/929
+* Removed ability to navigate to /search from our homepage: https://github.com/MAAP-Project/Community/issues/924
+* Removed rgedi and isce2 workspaces: https://github.com/MAAP-Project/Community/issues/893
+
+
+-------------------------------------------------------------
 3.1.4
 -------------------------------------------------------------
 | January 22, 2024
