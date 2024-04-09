@@ -7,7 +7,6 @@ Release Notes
 | April 1, 2024
 | Minor feature additions and bug fixes.
 
-
 Added
 ^^^^^^^^^^^^
 * Open in file browser button for output of completed jobs in Jobs UI: https://github.com/MAAP-Project/Community/issues/656
