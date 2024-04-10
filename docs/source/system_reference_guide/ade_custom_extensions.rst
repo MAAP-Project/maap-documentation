@@ -1,4 +1,4 @@
-ADE Custom Extensions
+Other Custom Extensions
 =======================================
 
 .. toctree::
