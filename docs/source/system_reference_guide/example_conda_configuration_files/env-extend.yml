@@ -1,4 +1,4 @@
-name: base
+name: pangeo
 channels:
   - conda-forge
 dependencies:
