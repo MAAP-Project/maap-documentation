@@ -1,0 +1,25 @@
+algorithm_description: This is a free-form description of your algorithm
+algorithm_name: dps-tutorial-name
+algorithm_version: main
+build_command: dps_tutorial/gdal_wrapper/build-env.sh
+disk_space: 1GB
+docker_container_url: mas.maap-project.org/root/maap-workspaces/base_images/vanilla:v3.1.5
+inputs:
+  config: []
+  file:
+  - default: ''
+    description: The name of the input file
+    name: input_file
+    required: true
+  positional:
+  - default: ''
+    description: output file name
+    name: output_file
+    required: true
+  - default: '30'
+    description: the percent reduction of your output file vs the input file
+    name: percent_reduction
+    required: true
+queue: maap-dps-worker-8gb
+repository_url: https://github.com/MAAP-Project/dps_tutorial.git
+run_command: dps_tutorial/gdal_wrapper/run_gdal.sh
