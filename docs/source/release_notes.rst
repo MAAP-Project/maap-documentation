@@ -23,7 +23,7 @@ Added
 * All extensions are available to be installed via pip now.
 * Added lonboard to all images.
 * Added all packages from the previous vanilla workspace (now called python) to the R workspace.
-* Maap-py no longer tracks a maap.cfg file. This change should be transparent to the users.
+* Maap-py no longer tracks a maap.cfg file. When using maap.py you should no longer indicate the API endpoint URL (maap = MAAP() instead of maap = MAAP(api.maap-project.org)).
 * Integrated Playwright testing framework into custom JupyterLab extensions.
 * Added support for the "maap-data-reader" assumed role. This allows DPS jobs and workspaces direct s3 access to certain DAAC buckets without requiring credentials or manual token refreshing (see https://docs.maap-project.org/en/latest/technical_tutorials/access/direct_access.html).
 * Migrated MAAP API PostgreSQL instances to RDS.
