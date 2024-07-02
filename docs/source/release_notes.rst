@@ -33,6 +33,7 @@ Fixed
 * The default base image in the ADE algorithm registration form now shows the correct MAS environment and workspace type.
 * The API error "Client is not EDL policy compatible" is now included in the response from the maap-py method aws.earthdata_s3_credentials(url) when applicable.
 
+------
 
 -------------------------------------------------------------
 3.1.5
@@ -72,6 +73,7 @@ Changed
 * Removed ability to navigate to /search from our homepage: https://github.com/MAAP-Project/Community/issues/924
 * Removed rgedi and isce2 workspaces: https://github.com/MAAP-Project/Community/issues/893
 
+------
 
 -------------------------------------------------------------
 3.1.4
@@ -104,6 +106,7 @@ Changed
 * Updated MAAP API CMR data endpoint to better handler error responses: https://github.com/MAAP-Project/Community/issues/888
 * Updated interface to maap-py granule.getDownloadUrl() to return http url: https://github.com/MAAP-Project/Community/issues/848
 
+------
 
 -------------------------------------------------------------
 3.1.3
@@ -135,6 +138,7 @@ Removed
 ^^^^^^^^^^^^
 * Archived shared documents from the MAAP portal along with Memphis WordPress Plugin: https://github.com/MAAP-Project/Community/issues/821
 
+------
 
 -------------------------------------------------------------
 3.1.1
@@ -163,6 +167,7 @@ Removed
 ^^^^^^^^^^^^
 * isce2 workspaces are now deprecated.
 
+------
 
 -------------------------------------------------------------
 3.1.0
