@@ -12,6 +12,7 @@ Breaking Changes
 * The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default “vanilla” conda environment has been renamed to “python”.
 
 Therefore:
+
 * To use the new workspace for your DPS runs, you will need to update your build scripts or environment.yml files to use python instead of vanilla. Additionally, your run script will need to make sure it’s running in the python environment (not vanilla). 
 * Any new DPS algorithms being registered must use the new container URL mas.maap-project.org/root/maap-workspaces/base_images/python:v4.0.0 — ensure that they are using `python` as the name and not `vanilla`.
 * To use the new workspace with an old algorithm (e.g., running your existing algorithm in the Jupyter Terminal), you will need to update your scripts to reference the `python` conda environment instead of `vanilla`.
