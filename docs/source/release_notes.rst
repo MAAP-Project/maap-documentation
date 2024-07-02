@@ -2,6 +2,38 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+4.0.0
+-------------------------------------------------------------
+| July 3, 2024
+| Major new release with breaking changes.
+
+Breaking Changes
+^^^^^^^^^^^^
+* The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default “vanilla” conda environment has been renamed to “python”.
+
+Therefore:
+* To use the new workspace for your DPS runs, you will need to update your build scripts or environment.yml files to use python instead of vanilla. Additionally, your run script will need to make sure it’s running in the python environment (not vanilla). 
+* Any new DPS algorithms being registered must use the new container URL mas.maap-project.org/root/maap-workspaces/base_images/python:v4.0.0 — ensure that they are using `python` as the name and not `vanilla`.
+* To use the new workspace with an old algorithm (e.g., running your existing algorithm in the Jupyter Terminal), you will need to update your scripts to reference the `python` conda environment instead of `vanilla`.
+
+Added
+^^^^^^^^^^^^
+* JupyterLab has been updated to v4.
+* All extensions are available to be installed via pip now.
+* Added lonboard to all images.
+* Added all packages from the previous vanilla workspace (now called python) to the R workspace.
+* Maap-py no longer tracks a maap.cfg file. This change should be transparent to the users.
+* Integrated Playwright testing framework into custom JupyterLab extensions.
+* Added support for the "maap-data-reader" assumed role. This allows DPS jobs and workspaces direct s3 access to certain DAAC buckets without requiring credentials or manual token refreshing (see https://docs.maap-project.org/en/latest/technical_tutorials/access/direct_access.html).
+* Migrated MAAP API PostgreSQL instances to RDS.
+
+Fixed
+^^^^^^^^^^^^
+* The default base image in the ADE algorithm registration form now shows the correct MAS environment and workspace type.
+* The API error "Client is not EDL policy compatible" is now included in the response from the maap-py method aws.earthdata_s3_credentials(url) when applicable.
+
+
+-------------------------------------------------------------
 3.1.5
 -------------------------------------------------------------
 | April 1, 2024
