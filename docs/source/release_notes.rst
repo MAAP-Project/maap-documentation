@@ -2,6 +2,45 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+4.0.0
+-------------------------------------------------------------
+| July 3, 2024
+| Major new release with breaking changes.
+
+Breaking Changes
+^^^^^^^^^^^^
+* The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default `vanilla` conda environment has been renamed to `python`.
+
+Workspace impacts:
+
+* This does not impact the `r` or `icse3` workspaces.
+* If you are using the Basic Stable (vanilla) workspace, please upgrade to the new Python (default) workspace. 
+* To use the new workspace to run a `vanilla` algorithm (e.g., running your existing algorithm in the Jupyter Terminal), you will need to update your scripts to reference the `python` conda environment instead of `vanilla`.
+
+DPS Algorithm Impacts:
+
+* To use the new workspace for your DPS runs, you will need to update your build scripts and environment.yml files to use `python`` instead of `vanilla`. Additionally, your run script will need to make sure it’s running in the `python`` environment (not `vanilla`). 
+* DPS algorithms being registered will use the new container URL mas.maap-project.org/root/maap-workspaces/base_images/python:v4.0.0 — also ensure that they are using `python` as the conda-environment name and not `vanilla`.
+
+Added
+^^^^^^^^^^^^
+* JupyterLab has been updated to v4.
+* All extensions are available to be installed via pip now.
+* Added lonboard to all images.
+* Added all packages from the previous vanilla workspace (now called python) to the R workspace.
+* Maap-py no longer tracks a maap.cfg file. When using maap.py you should no longer indicate the API endpoint URL (maap = MAAP() instead of maap = MAAP(api.maap-project.org)).
+* Integrated Playwright testing framework into custom JupyterLab extensions.
+* Added support for the "maap-data-reader" assumed role. This allows DPS jobs and workspaces direct s3 access to certain DAAC buckets without requiring credentials or manual token refreshing (see https://docs.maap-project.org/en/latest/technical_tutorials/access/direct_access.html).
+* Migrated MAAP API PostgreSQL instances to RDS.
+
+Fixed
+^^^^^^^^^^^^
+* The default base image in the ADE algorithm registration form now shows the correct MAS environment and workspace type.
+* The API error "Client is not EDL policy compatible" is now included in the response from the maap-py method aws.earthdata_s3_credentials(url) when applicable.
+
+------
+
+-------------------------------------------------------------
 3.1.5
 -------------------------------------------------------------
 | April 1, 2024
@@ -39,6 +78,7 @@ Changed
 * Removed ability to navigate to /search from our homepage: https://github.com/MAAP-Project/Community/issues/924
 * Removed rgedi and isce2 workspaces: https://github.com/MAAP-Project/Community/issues/893
 
+------
 
 -------------------------------------------------------------
 3.1.4
@@ -71,6 +111,7 @@ Changed
 * Updated MAAP API CMR data endpoint to better handler error responses: https://github.com/MAAP-Project/Community/issues/888
 * Updated interface to maap-py granule.getDownloadUrl() to return http url: https://github.com/MAAP-Project/Community/issues/848
 
+------
 
 -------------------------------------------------------------
 3.1.3
@@ -102,6 +143,7 @@ Removed
 ^^^^^^^^^^^^
 * Archived shared documents from the MAAP portal along with Memphis WordPress Plugin: https://github.com/MAAP-Project/Community/issues/821
 
+------
 
 -------------------------------------------------------------
 3.1.1
@@ -130,6 +172,7 @@ Removed
 ^^^^^^^^^^^^
 * isce2 workspaces are now deprecated.
 
+------
 
 -------------------------------------------------------------
 3.1.0
