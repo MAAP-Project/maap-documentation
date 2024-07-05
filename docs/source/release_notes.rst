@@ -19,7 +19,7 @@ Workspace impacts:
 
 DPS Algorithm Impacts:
 
-* To use the new workspace for your DPS runs, you will need to update your build scripts and environment.yml files to use `python`` instead of `vanilla`. Additionally, your run script will need to make sure it’s running in the `python`` environment (not `vanilla`). 
+* To use the new Python (default) as the base image for your DPS runs, you will need to update your build scripts and environment.yml files to use `python`` instead of `vanilla`. Additionally, your run script will need to make sure it’s running in the `python` conda environment (not `vanilla`). 
 * DPS algorithms being registered will use the new container URL mas.maap-project.org/root/maap-workspaces/base_images/python:v4.0.0 — also ensure that they are using `python` as the conda-environment name and not `vanilla`.
 
 Added
