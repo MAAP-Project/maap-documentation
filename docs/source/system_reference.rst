@@ -8,7 +8,7 @@ System Reference Guide
   system_reference_guide/create_workspace.ipynb
   system_reference_guide/custom-environments.ipynb
   system_reference_guide/share_data.ipynb
-  system_reference_guide/orgs.ipynb
+  system_reference_guide/organizations.ipynb
   system_reference_guide/ssh.ipynb
   system_reference_guide/algorithm_registration.ipynb
   system_reference_guide/jobsui.ipynb
