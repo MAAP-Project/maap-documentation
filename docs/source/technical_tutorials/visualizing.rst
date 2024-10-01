@@ -5,6 +5,7 @@ Visualize
   :maxdepth: 2
   :caption: Visualize:
   
+  visualization/visualizing_titiler-pgstac.ipynb
   visualization/visualizing_mosaicjson.ipynb
   visualization/visualize_mosaic_stac_ipyleaflet.ipynb
   visualization/interval_color_mapping.ipynb
