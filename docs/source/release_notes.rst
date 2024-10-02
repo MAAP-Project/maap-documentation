@@ -20,8 +20,8 @@ Breaking Changes
 
 Added
 ^^^^^^^^^^^^^^^^^^^
-* Added new Organizations security features and user access-control to DPS job-queues. You will now only see the Job queues that are available to you; if you are missing a queue please ask a team lead or the platform team for help configuring your permissions. See https://docs.maap-project.org/en/latest/system_reference_guide/organizations.html
-* Added ability to store Secrets using maap-py and utilize them within DPS Jobs. This will help accommodate things like passing Google Earth Engine credentials to your Algorithm in a secure way. See https://docs.maap-project.org/en/latest/system_reference_guide/jobs_maappy.html#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)
+* Added new `Organizations security features <system_reference_guide/organizations.html>`_ and user access-control to DPS job-queues. You will now only see the Job queues that are available to you; if you are missing a queue please ask a team lead or the platform team for help configuring your permissions. 
+* Added ability to `store Secrets using maap-py <system_reference_guide/jobs_maappy.html#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)>`_ and utilize them within DPS Jobs. This will help accommodate things like passing Google Earth Engine credentials to your Algorithm in a secure way.  
 * New `maap_base` image that will speed up Algorithm Registration and smaller DPS Jobs significantly containing just conda by reducing the time for the system to build the runtime environment.
 
 Fixed
