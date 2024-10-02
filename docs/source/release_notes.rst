@@ -8,29 +8,29 @@ Release Notes
 | Release with several important improvements.
 
 Significant Changes
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 * A new `maap_base` image container is available with a minimal runtime environment. When using this new base image, algorithm registration will be much quicker. Smaller jobs will also run more quickly. In order to use this new container, algorithm build scripts must specify all of the required libraries (including those that are included with the `python` and `r` containers).
 * A way to securely manage credentials for other services (e.g., Google Earth Engine credentials) and pass them into DPS Jobs. This is called Secrets management.
 
 Breaking Changes
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 * No breaking changes were introduced in this release.
 * Please migrate to the newer version of workspaces as soon as possible in order to leverage the improved security.
 * The platform team will help migrate algorithms to the optimized base images, over the next 3 months.
 
 Added
-^^^^^^^^^^^^
-* Added new Organizations security features and user access-control to DPS job-queues. You will now only see the Job queues that are available to you; if you are missing a queue please ask a team lead or the platform team for help configuring your permissions. (Link to doc)
-* Added ability to store Secrets using maap-py and utilize them within DPS Jobs. This will help accommodate things like passing Google Earth Engine credentials to your Algorithm in a secure way. (Link to doc)
+^^^^^^^^^^^^^^^^^^^
+* Added new Organizations security features and user access-control to DPS job-queues. You will now only see the Job queues that are available to you; if you are missing a queue please ask a team lead or the platform team for help configuring your permissions. See https://docs.maap-project.org/en/latest/system_reference_guide/organizations.html
+* Added ability to store Secrets using maap-py and utilize them within DPS Jobs. This will help accommodate things like passing Google Earth Engine credentials to your Algorithm in a secure way. See https://docs.maap-project.org/en/latest/system_reference_guide/jobs_maappy.html#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)
 * New `maap_base` image that will speed up Algorithm Registration and smaller DPS Jobs significantly containing just conda by reducing the time for the system to build the runtime environment.
 
 Fixed
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^
 * Upon registering an Algorithm using the Registration UI, the build-link now opens in a new tab. It also provides the path to where the config yaml file is stored in your workspace and a notification with the registration link and algorithm name:branch.
 * Better error-handling when an Algorithm fails to register.
 
 Security Improvements
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^
 * Enhanced security for the DPS job-management workspace to check if a user is logged in.
 
 
@@ -42,7 +42,7 @@ Security Improvements
 | Major new release with breaking changes.
 
 Breaking Changes
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 * The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default `vanilla` conda environment has been renamed to `python`.
 
 Workspace impacts:
