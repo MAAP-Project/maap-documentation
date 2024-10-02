@@ -2,6 +2,25 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+4.1.0
+-------------------------------------------------------------
+| October 2, 2024
+| Major new release with breaking changes.
+
+Breaking Changes
+^^^^^^^^^^^^
+* The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default `vanilla` conda environment has been renamed to `python`.
+
+Added
+^^^^^^^^^^^^
+* JupyterLab has been updated to v4.
+
+Fixed
+^^^^^^^^^^^^
+* JupyterLab has been updated to v4.
+
+
+-------------------------------------------------------------
 4.0.0
 -------------------------------------------------------------
 | July 3, 2024
