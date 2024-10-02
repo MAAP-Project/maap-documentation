@@ -5,11 +5,12 @@ Release Notes
 4.1.0
 -------------------------------------------------------------
 | October 2, 2024
-| Major new release with breaking changes.
+| Release with several important improvements.
 
 Significant Changes
 ^^^^^^^^^^^^
 * A new `maap_base` image container is available with a minimal runtime environment. When using this new base image, algorithm registration will be much quicker. Smaller jobs will also run more quickly. In order to use this new container, algorithm build scripts must specify all of the required libraries (including those that are included with the `python` and `r` containers).
+* A way to securely manage credentials for other services (e.g., Google Earth Engine credentials) and pass them into DPS Jobs. This is called Secrets management.
 
 Breaking Changes
 ^^^^^^^^^^^^
@@ -25,7 +26,7 @@ Added
 
 Fixed
 ^^^^^^^^^^^^
-* Upon registering an Algorithm using the Registration UI, the build-link now opens in a new tab. It also provides the path to where the config yaml file is stored in your workspace and a notification with the registration link and algorithm name/branch 
+* Upon registering an Algorithm using the Registration UI, the build-link now opens in a new tab. It also provides the path to where the config yaml file is stored in your workspace and a notification with the registration link and algorithm name:branch.
 * Better error-handling when an Algorithm fails to register.
 
 Security Improvements
