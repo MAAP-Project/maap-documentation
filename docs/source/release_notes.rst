@@ -32,8 +32,9 @@ Added
     * To use this new image, specify the following url during algorithm registraion ``mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.1.0``.
 * MAAP DPS Sandbox queue
     * A new queue `maap-dps-sandbox` has been added for quick testing of registered algorithms. 
-    * This new queue has limited resources 8gb, and a max run time of 10mins for algorithms.
+    * This new queue has limited resources (8gb), and a max run time of 10 minutes for algorithms.
     * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
+    * This is the only queue available to Guest accounts
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
