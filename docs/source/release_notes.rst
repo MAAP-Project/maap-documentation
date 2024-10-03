@@ -19,8 +19,7 @@ Breaking Changes
 ^^^^^^^^^^^^^^^^^^^
 * Please migrate to the newer version of workspaces as soon as possible in order to leverage the improved security.
 * The platform team will help migrate Algorithms to the optimized base images, over the next three months.
-* Some older Algorithms may see an error stating /home/ops/.maap-dps.env file not found or /app/dps_wrapper.sh: line 10: python: command not found when running on the DPS.
-This requires re-registration of the Algorithm.
+* Some older Algorithms may see an error stating /home/ops/.maap-dps.env file not found or /app/dps_wrapper.sh: line 10: python: command not found when running on the DPS. This requires re-registration of the Algorithm.
 
 Added
 ^^^^^^^^^^^^^^^^^^^
