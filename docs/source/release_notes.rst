@@ -30,7 +30,7 @@ Added
     * New `maap_base` image that will speed up Algorithm Registration and smaller DPS Jobs significantly containing just conda by reducing the time for the system to build the runtime environment. Smaller jobs will also run more quickly. 
     * In order to use this new container, algorithm build scripts must specify all of the required libraries in their conda environment.yaml file. 
     * To use this new image, specify the following url during algorithm registraion ``mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.1.0``.
-* MAAP DPS Sandox queue
+* MAAP DPS Sandbox queue
     * A new queue `maap-dps-sandbox` has been added for quick testing of registered algorithms. 
     * This new queue has limited resources 8gb, and a max run time of 10mins for algorithms.
     * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
