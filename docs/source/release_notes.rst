@@ -48,7 +48,7 @@ Security Improvements
 Known Issues
 ^^^^^^^^^^^^^^^^^^^^^
 * Some older algorithms failing 
-   * Some older algorithms may see an error stating ``/home/ops/.maap-dps.env file not found`` when running on the DPS.
+   * Some older algorithms may see an error stating ``/home/ops/.maap-dps.env file not found`` or ``/app/dps_wrapper.sh: line 10: python: command not found`` when running on the DPS.
    * This is known to happen when the same github repository is used for registering multiple algorithms using the same branch (eg. main or master). This can be resolved by re-registering your algorithm.
    * For the future, if you want an algorithm container to stay unchanged, consider using github tags and registering an algorithm from that tag (eg v1, v2, etc).
 
