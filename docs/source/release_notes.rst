@@ -5,20 +5,21 @@ Release Notes
 4.1.0
 -------------------------------------------------------------
 | October 2, 2024
-| Release with several important improvements.
+| Release with several important improvements. To use the new features please start a new v4.1.0 workspace.
 
 Significant Changes
 ^^^^^^^^^^^^^^^^^^^
 * A new `maap_base` image container is available with a minimal runtime environment for use within DPS. Read more below.
 * A way to securely manage credentials for other services (e.g., Google Earth Engine credentials) and pass them into DPS Jobs. This is called Secrets management.
 * Organizations feature to help enable dedicated compute resources for user groups and prevent unauthorized access to resource queues.
-* MAAP DPS Sandox queue for quick testing / validating algorithm build in DPS.
+* MAAP DPS Sandbox queue for quick testing and validating algorithm builds in DPS.
+* Some older algorithms may require re-registration due to underlying DPS software being upgraded.
 
 Breaking Changes
 ^^^^^^^^^^^^^^^^^^^
 * Please migrate to the newer version of workspaces as soon as possible in order to leverage the improved security.
-* The platform team will help migrate algorithms to the optimized base images, over the next 3 months.
-* Some older algorithms now fail on the DPS, read more below in the Known Issues section. 
+* The platform team will help migrate Algorithms to the optimized base images, over the next three months.
+* Some older Algorithms may see an error stating /home/ops/.maap-dps.env file not found or /app/dps_wrapper.sh: line 10: python: command not found when running on the DPS. This requires re-registration of the Algorithm.
 
 Added
 ^^^^^^^^^^^^^^^^^^^
@@ -35,6 +36,7 @@ Added
     * This new queue has limited resources (8gb), and a max run time of 10 minutes for algorithms.
     * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
     * This is the only queue available to Guest accounts
+* DPS software upgraded to HySDS v5.2.0
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
