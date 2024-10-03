@@ -12,6 +12,7 @@ Significant Changes
 * A new `maap_base` image container is available with a minimal runtime environment for use within DPS. Read more below.
 * A way to securely manage credentials for other services (e.g., Google Earth Engine credentials) and pass them into DPS Jobs. This is called Secrets management.
 * Organizations feature to help enable dedicated compute resources for user groups and prevent unauthorized access to resource queues.
+* MAAP DPS Sandox queue for quick testing / validating algorithm build in DPS.
 
 Breaking Changes
 ^^^^^^^^^^^^^^^^^^^
@@ -29,6 +30,10 @@ Added
     * New `maap_base` image that will speed up Algorithm Registration and smaller DPS Jobs significantly containing just conda by reducing the time for the system to build the runtime environment. Smaller jobs will also run more quickly. 
     * In order to use this new container, algorithm build scripts must specify all of the required libraries in their conda environment.yaml file. 
     * To use this new image, specify the following url during algorithm registraion ``mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.1.0``.
+* MAAP DPS Sandox queue
+    * A new queue `maap-dps-sandbox` has been added for quick testing of registered algorithms. 
+    * This new queue has limited resources 8gb, and a max run time of 10mins for algorithms.
+    * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
