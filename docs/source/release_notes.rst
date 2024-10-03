@@ -2,13 +2,73 @@ Release Notes
 =======================================
 
 -------------------------------------------------------------
+4.1.0
+-------------------------------------------------------------
+| October 2, 2024
+| Release with several important improvements.
+
+Significant Changes
+^^^^^^^^^^^^^^^^^^^
+* A new `maap_base` image container is available with a minimal runtime environment for use within DPS. Read more below.
+* A way to securely manage credentials for other services (e.g., Google Earth Engine credentials) and pass them into DPS Jobs. This is called Secrets management.
+* Organizations feature to help enable dedicated compute resources for user groups and prevent unauthorized access to resource queues.
+* MAAP DPS Sandox queue for quick testing / validating algorithm build in DPS.
+
+Breaking Changes
+^^^^^^^^^^^^^^^^^^^
+* Please migrate to the newer version of workspaces as soon as possible in order to leverage the improved security.
+* The platform team will help migrate algorithms to the optimized base images, over the next 3 months.
+* Some older algorithms now fail on the DPS, read more below in the Known Issues section. 
+
+Added
+^^^^^^^^^^^^^^^^^^^
+* `Organizations features <system_reference_guide/organizations.html>`_
+    * Added new Organizations features and user access-control to DPS job-queues. You will now only see the Job queues that are available to you; if you are missing a queue please ask a team lead or the platform team for help configuring your permissions. 
+* `Secrets Management <system_reference_guide/jobs_maappy.html#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)>`_ 
+    * Added ability to `store Secrets using maap-py <system_reference_guide/jobs_maappy.html#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)>`_ and utilize them within DPS Jobs. This will help accommodate things like passing Google Earth Engine credentials to your Algorithm in a secure way.  
+* New `maap_base` image
+    * New `maap_base` image that will speed up Algorithm Registration and smaller DPS Jobs significantly containing just conda by reducing the time for the system to build the runtime environment. Smaller jobs will also run more quickly. 
+    * In order to use this new container, algorithm build scripts must specify all of the required libraries in their conda environment.yaml file. 
+    * To use this new image, specify the following url during algorithm registration ``mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.1.0``.
+* MAAP DPS Sandbox queue
+    * A new queue `maap-dps-sandbox` has been added for quick testing of registered algorithms. 
+    * This new queue has limited resources (8gb), and a max run time of 10 minutes for algorithms.
+    * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
+    * This is the only queue available to Guest accounts
+
+Fixed
+^^^^^^^^^^^^^^^^^^^
+* Upon registering an Algorithm using the Registration UI, the build-link now opens in a new tab. It also provides the path to where the config yaml file is stored in your workspace and a notification with the registration link and algorithm name:branch.
+* Better error-handling when an Algorithm fails to register.
+
+Security Improvements
+^^^^^^^^^^^^^^^^^^^^^
+* Enhanced security for the DPS job-management workspace to check if a user is logged in.
+
+Known Issues
+^^^^^^^^^^^^^^^^^^^^^
+* Some older algorithms failing 
+   * Some older algorithms may see an error stating ``/home/ops/.maap-dps.env file not found`` or ``/app/dps_wrapper.sh: line 10: python: command not found`` when running on the DPS.
+   * This is known to happen when the same github repository is used for registering multiple algorithms using the same branch (eg. main or master). This can be resolved by re-registering your algorithm.
+   * For the future, if you want an algorithm container to stay unchanged, consider using github tags and registering an algorithm from that tag (eg v1, v2, etc).
+
+FAQs
+^^^^^^^^^^^^^^^^^^^^^
+* I dont see the resource queue I used in the past
+    * Check if you can use any alternative available queues.
+    * If not, contact the platform team to request your specific queue.
+* My algorithm is now failing
+    * If your previously successful algorithm is now failing, try re-registering once again. 
+    * If for any reason re-registering is not an option reach out to the Platform Team.
+
+-------------------------------------------------------------
 4.0.0
 -------------------------------------------------------------
 | July 3, 2024
 | Major new release with breaking changes.
 
 Breaking Changes
-^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^
 * The “Basic Stable” workspace stack has been renamed to “Python (default)”. The associated default `vanilla` conda environment has been renamed to `python`.
 
 Workspace impacts:
