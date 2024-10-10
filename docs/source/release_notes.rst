@@ -1,6 +1,8 @@
 Release Notes
 =======================================
 
+Release notes can be found here. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+
 -------------------------------------------------------------
 4.1.0
 -------------------------------------------------------------
