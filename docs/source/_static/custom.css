@@ -26,3 +26,7 @@
 .wy-nav-content-wrap {
   background: #fcfcfc;
 }
+
+.rtd-version-warning {
+  display: none;
+}
