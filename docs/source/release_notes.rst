@@ -4,6 +4,18 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and then comprehensive descrptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+4.1.1
+-------------------------------------------------------------
+| October 23, 2024
+| Minor release with non-breaking changes. To use the new features please start a new v4.1.1 workspace.
+
+Fixed
+^^^^^^^^^^^^^^^^^^^
+* Removed pygeos from all base images.
+* Increased number of records in the Jupyter Jobs UI to 200. 
+* Expanded s3 permissions for the maap-py `aws.workspace_bucket_credentials` function. Credentials for user bucket folders now include full read/write access. See <system_reference_guide/acessing_bucket_data.html>.
+
+-------------------------------------------------------------
 4.1.0
 -------------------------------------------------------------
 | October 2, 2024
