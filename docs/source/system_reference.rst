@@ -19,6 +19,7 @@ It is often referenced from the application-focused Science and Technical tutori
   system_reference_guide/work_with_git.ipynb
   system_reference_guide/organizations.ipynb
   system_reference_guide/ssh.ipynb
+  system_reference_guide/acessing_bucket_data.ipynb
   system_reference_guide/ade_custom_extensions.rst
   system_reference_guide/faq.rst
   
