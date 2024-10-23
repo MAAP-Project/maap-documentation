@@ -10,7 +10,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
@@ -71,3 +71,12 @@ html_theme_options = {
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# Read The Docs Configuration
+# https://about.readthedocs.com/blog/2024/07/addons-by-default/
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+if os.environ.get("READTHEDOCS", "") == "True":
+	if "html_context" not in globals():
+        	html_context = {}
+	html_context["READTHEDOCS"] = True
