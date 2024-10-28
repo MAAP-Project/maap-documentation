@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cloud-Optimized Geospatial Formats Guide</title>
+    <style>
+        /* Global font and line-height styles */
+        body {
+            font-size: 16px;
+            line-height: 1.75;
+            font-family: "Arial", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1, h2, h3 {
+            font-weight: bold;
+            line-height: 1;
+            margin-bottom:8px;
+        }
+
+        p, ul, ol {
+            margin: bottom 9px;
+            text-indent: 30px;
+        }
+
+        ul {
+            padding-left: 1.5em;
+        }
+
+        pre {
+            font-family: "Arial", sans-serif;
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 0;
+            overflow-x: auto;
+        }
+
+        
+
+        /* Code block styling */
+        .code {
+            font-family: monospace;
+            background-color: #f5f5f5;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        /* Main content styling */
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Cloud-Optimized Geospatial Formats Guide</h1>
+        <div class="author">
+            Authors: Rajat Shinde (UAH), Alex Mandel (DevSeed), Jamison French (DevSeed), Brian Freitag (NASA MSFC), Sheyenne Kirkland (UAH), Harshini Girish (UAH)
+        </div>
+    
+        </body>
+        <br>
+        <div class="date">
+            Date: October 25, 2024
+        </div>
+        <br>
+        <div class="description">
+            Description: The LASER (LAS) file format is designed to store 3-dimensional (x,y,z) point cloud data typically collected from LiDAR. An LAZ file is a compressed LAS file and a Cloud-Optimized Point Cloud (COPC) file is a valid LAZ file.
+
+            COPC files are similar to COGs for GeoTIFFs: Both are valid versions of the original file format but with additional requirements to support cloud-optimized data access. In the case of COGs, there are additional requirements for tiling and overviews. For COPC, data must be organized into a clustered octree with a variable-length record (VLR) describing the octree structure.
+        </div>
+        <h2>Run This Notebook</h2>
+        <p>To access and run this tutorial within MAAP’s Algorithm Development Environment (ADE), please refer to the <a href="https://docs.maap-project.org/en/stable/getting_started.html" style="color: rgb(6, 104, 180);">Getting started with the MAAP</a> section of our documentation.</p>
+
+        <p>Disclaimer: It is highly recommended to run a tutorial within MAAP’s ADE, which already includes packages specific to MAAP, such as maap-py. Running the tutorial outside of the MAAP ADE may lead to errors.</p>
+        </p>
+    
+
+    <h2>Import Packages</h2>
+<p>In this example, we demonstrate how to read a LiDAR LAS file using PDAL in Python and convert the LiDAR LAS file to Cloud-Optimized Point Cloud (COPC) format on the MAAP ADE. </p>
+<p>Within your Jupyter Notebook, start by importing the maap package. Then invoke the MAAP constructor, setting the maap_host argument to 'api.ops.maap-project.org'</p>
+
+<pre style="background-color: #f9f9f9; padding: 1 px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># import os module</span>
+<strong></strong><span style="color: #04471b;">import</span></strong> <span style="color: darkblue;">os</span>
+<span style="font-style: italic; color: #04471b;"># import the maap package to handle queries</span>
+<span style="color: olive;">from</span> <span style="color: darkblue;">maap.maap</span> <span style="color: olive;">import</span> <span style="color: darkblue;">MAAP</span>
+<span style="font-style: italic; color: #04471b;"># invoke the MAAP constructor using the maap_host argument</span>
+<span style="color: darkblue;">maap</span> = <span style="color: darkblue;">MAAP</span>(maap_host='<span style="color: red;">api.ops.maap-project.org</span>')
+</code>
+</pre>
+
+        <h2>Downloading the data</h2>
+        <p>We are using search_data method from the earthaccess module for searching the granules from the selected collection. The temporal argument defines the temporal range for</p>
+    
+        <pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># Search Granules</span>
+<span style="color: darkblue;">las_item_results</span> = <span style="color: darkblue;">earthaccess.search_data</span>(
+    short_name="<span style="color: red;">GLLIDARPC</span>",
+    version="<span style="color: red;">001</span>",
+    temporal = ("<span style="color: red;">2020</span>"), 
+    count=<span style="color: red;">3</span> 
+)
+</code>
+</pre>
+
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: black;">Granules found: 72</p>
+
+
+        <PRE>las_item_result</PRE>
+        </br>
+        <div style="overflow-x: auto; white-space: pre-wrap; font-family: 'Courier New', monospace; padding: 5px; font-size: 0.8em; line-height: 1.2;">
+[Collection: {'EntryTitle': 'G-LiHT Lidar Point Cloud V001'}
+ Spatial coverage: {'HorizontalSpatialDomain': {'Geometry': {'GPolygons': [{'Boundary': {'Points': [{'Longitude': -81.03452828650298, 'Latitude': 25.50220025425373}, {'Longitude': -81.01391715300757, 'Latitude': 25.50220365895999}, {'Longitude': -81.01391819492625, 'Latitude': 25.5112430715201}, {'Longitude': -81.03453087148995, 'Latitude': 25.511239665437053}, {'Longitude': -81.03452828650298, 'Latitude': 25.50220025425373}]}}]}}}
+ Temporal coverage: {'RangeDateTime': {'BeginningDateTime': '2020-03-11T04:00:00.000Z', 'EndingDateTime': '2020-03-12T03:59:59.000Z'}}
+ Size(MB): 238.623
+ Data: ['https://e4ftl01.cr.usgs.gov//GWELD1/COMMUNITY/GLLIDARPC.001/2020.03.11/GLLIDARPC_FL_20200311_FIA8_l0s47.las'],
+ 
+Collection: {'EntryTitle': 'G-LiHT Lidar Point Cloud V001'}
+ Spatial coverage: {'HorizontalSpatialDomain': {'Geometry': {'GPolygons': [{'Boundary': {'Points': [{'Longitude': -81.02242648723991, 'Latitude': 25.493163090615468}, {'Longitude': -80.99410838333016, 'Latitude': 25.49316468678571}, {'Longitude': -80.99410794242846, 'Latitude': 25.502204110708817}, {'Longitude': -81.02242816553566, 'Latitude': 25.50220251389295}, {'Longitude': -81.02242648723991, 'Latitude': 25.493163090615468}]}}]}}}
+ Temporal coverage: {'RangeDateTime': {'BeginningDateTime': '2020-03-11T04:00:00.000Z', 'EndingDateTime': '2020-03-12T03:59:59.000Z'}}
+ Size(MB): 248.383
+ Data: ['https://e4ftl01.cr.usgs.gov//GWELD1/COMMUNITY/GLLIDARPC.001/2020.03.11/GLLIDARPC_FL_20200311_FIA8_l0s46.las'],
+ 
+Collection: {'EntryTitle': 'G-LiHT Lidar Point Cloud V001'}
+ Spatial coverage: {'HorizontalSpatialDomain': {'Geometry': {'GPolygons': [{'Boundary': {'Points': [{'Longitude': -80.94099075054905, 'Latitude': 25.276201329530473}, {'Longitude': -80.9355627247816, 'Latitude': 25.276199059361314}, {'Longitude': -80.9355579494582, 'Latitude': 25.285238744206318}, {'Longitude': -80.94098637748567, 'Latitude': 25.285241015299494}, {'Longitude': -80.94099075054905, 'Latitude': 25.276201329530473}]}}]}}}
+ Temporal coverage: {'RangeDateTime': {'BeginningDateTime': '2020-03-11T04:00:00.000Z', 'EndingDateTime': '2020-03-12T03:59:59.000Z'}}
+ Size(MB): 91.0422
+ Data: ['https://e4ftl01.cr.usgs.gov//GWELD1/COMMUNITY/GLLIDARPC.001/2020.03.11/GLLIDARPC_FL_20200311_FIA8_l0s22.las']]
+</div>
+
+<p>Let’s use the file with size 91.04 MB and convert it to a COPC format.</p>
+           <pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># Download Data - Selecting the 3rd file from the `las_item_results` list</span>
+<span style="color: darkblue;">gliht_las_file</span> = <span style="color: darkblue;">earthaccess.download</span>(<span style="color: darkblue;">las_item_results[2]</span>, <span style="color: darkblue;">data_dir</span>)
+<span style="color: darkblue;">las_filename</span> = <span style="color: darkblue;">gliht_las_file[0]</span>
+<span style="color: darkblue;">print</span>(<span style="color: darkblue;">las_filename</span>)
+</code>
+</pre>
+
+<br>
+<div style="overflow-x: auto; white-space: pre-wrap; font-family: 'Courier New', monospace; padding: 5px; font-size: 0.8em; line-height: 1.2;">
+Getting 1 granules, approx download size: 0.09 GB
+File GLLIDARPC_FL_20200311_FIA8_l0s22.las already downloaded
+data/GLLIDARPC_FL_20200311_FIA8_l0s22.las
+QUEUEING TASKS | : 100%|██████████| 1/1 [00:00&lt;00:00, 1869.12it/s]
+PROCESSING TASKS | : 100%|██████████| 1/1 [00:00&lt;00:00, 16131.94it/s]
+COLLECTING RESULTS | : 100%|██████████| 1/1 [00:00&lt;00:00, 33554.43it/s]
+</div>
+
+<H2>LAS to COPC Conversion</H2>
+<P>Converting the LAS file to a COPC format based on the programmatic pipeline construction.</P>
+<pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># Defining output filename. Usually, COPC files are saved as .copc.laz</span>
+<span style="color: darkblue;">copc_filename</span> = <span style="color: darkblue;">las_filename.replace</span>(<span style="color: red;">'.las'</span>, <span style="color: red;">'.copc.laz'</span>)
+<span style="color: darkblue;">copc_filename</span>
+</code>
+</pre>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 13px; color: black;">'data/GLLIDARPC_FL_20200311_FIA8_l0s22.copc.laz'</p>
+
+<pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># pipe = stage 1 | stage 2 | stage 3</span>
+<span style="font-style: italic; color: #04471b;"># Or, pipeline = pipeline 1 | stage 2</span>
+
+<span style="font-style: italic; color: #04471b;"># Once the pipeline is executed successfully, it prints the count of number of points</span>
+<span style="color: darkblue;">pipe</span> = <span style="color: darkblue;">pdal.Reader.las</span>(<span style="color: darkblue;">filename</span>=<span style="color: darkblue;">las_filename</span>) | <span style="color: darkblue;">pdal.Writer.copc</span>(<span style="color: darkblue;">filename</span>=<span style="color: darkblue;">copc_filename</span>)
+<span style="color: darkblue;">pipe.execute</span>()
+</code>
+</pre>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: black;">3409439</p>
+
+<H2>Validating The Product</H2>
+<p>As we can see from output of the below cell, the .copc.laz file is created in the destination directory.</p>
+<pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="font-style: italic; color: #04471b;"># using -go for removing user details and h for getting memory size in MBs</span>
+<span style="color: darkblue;">!ls</span> <span style="color: red;">-goh</span> <span style="color: darkblue;">./data</span>
+</code>
+</pre>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 13px; color: black; line-height: 1.2;">total 239888</p>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 13px; color: black; line-height: 1.2;">-rw-r--r--  1     26M Mar 20 11:55 GLLIDARPC_FL_20200311_FIA8_l0s22.copc.laz</p>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 13px; color: black; line-height: 1.2;">-rw-r--r--  1     91M Feb 29 11:27 GLLIDARPC_FL_20200311_FIA8_l0s22.las</p>
+<p>Let’s read the created COPC file again and check the value of copc flag from the metadata. If the generated LiDAR file is a valid COPC file, then this flag should be set to True.</p>
+
+<pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="color: #04471b; font-style: italic;"># Creating a pipeline to validate COPC file and check metadata</span>
+<span style="color: darkblue;">valid_pipe</span> = <span style="color: darkblue;">pdal.Reader.copc</span>(<span style="color: darkblue;">filename</span>=<span style="color: darkblue;">copc_filename</span>) | <span style="color: darkblue;">pdal.Filter.stats</span>()
+<span style="color: darkblue;">valid_pipe.execute</span>()
+
+<span style="color: #04471b; font-style: italic;"># Getting value for the "copc" key under the metadata</span>
+<span style="color: #04471b; font-style: italic;"># Output is True for a valid COPC</span>
+<span style="color: darkblue;">value</span> = <span style="color: darkblue;">valid_pipe.metadata["metadata"]["readers.copc"].get("copc")</span>
+<span style="color: darkblue;">print</span>(<span style="color: darkblue;">value</span>)
+</code>
+</pre>
+<p style="font-family: 'Courier New', Courier, monospace; font-size: 15px; color: black;">True</p>
+
+<h2>Accessing The Data</h2>
+<p>The data values can be accessed from the executed pipeline using valid_pipe.arrays. The values in the arrays represent the LiDAR point cloud attributes such as X, Y, Z, and Intensity, etc.</p>
+<pre style="background-color: #f9f9f9; padding: 5px; border-left: 4px solid #ddd; font-size: 0.85em;">
+<code style="color: #04471b;">
+<span style="color: #04471b; font-style: italic;"># Extract array values from the pipeline</span>
+<span style="color: darkblue;">arr_values</span> = <span style="color: darkblue;">valid_pipe.arrays</span>
+
+<span style="color: #04471b; font-style: italic;"># Print the array values as a dataframe</span>
+<span style="color: darkblue;">print</span>(<span style="color: darkblue;">arr_values</span>)
+</code>
+</pre>
+<div style="overflow-x: auto; white-space: pre-wrap; font-family: 'Courier New', Courier, monospace; font-size: 13px; color: black; line-height: 1;">
+[array([(506245.56, 2796471.44, 0.24, 40740, 1, 1, 1, 0, 2, 0, 0, 0, 0,  16.998, 1,   0, 310483.75227621, 0),
+       (506247.16, 2796471.58, 0.27, 35541, 2, 2, 1, 0, 2, 0, 0, 0, 0,  16.998, 1,   0, 310483.75229014, 0),
+       (506247.95, 2796471.65, 0.24, 17716, 2, 2, 1, 0, 2, 0, 0, 0, 0,  16.998, 1,   0, 310483.75229699, 0),
+       ...,
+       (506066.58, 2796032.75, 2.34, 31587, 1, 1, 0, 0, 1, 0, 0, 0, 0, -24.   , 2, 203, 310477.36925451, 0),
+       (506067.37, 2796033.29, 2.52, 32876, 1, 1, 0, 0, 1, 0, 0, 0, 0, -22.998, 2, 216, 310477.37590641, 0),
+       (506062.6 , 2796033.27, 1.4 , 27393, 1, 1, 0, 0, 1, 0, 0, 0, 0, -24.   , 2, 108, 310477.38259945, 0)],
+</div>
+<p>As observed from the output of the above cell, the data values are retrieved from the downloaded product. Hence, validating the downloaded file.</p>
