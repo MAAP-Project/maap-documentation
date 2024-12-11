@@ -1,3 +1,5 @@
+.. _working_with_r_section:
+
 Working with R
 =======================================
 
@@ -6,3 +8,4 @@ Working with R
   :caption: Working with R:
   
   working_with_r/submitting_jobs_r.ipynb
+  working_with_r/cmr_search_in_r.ipynb
