@@ -1,3 +1,5 @@
+.. _working_with_r_section:
+
 Working with R
 =======================================
 
