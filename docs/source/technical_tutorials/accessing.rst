@@ -11,3 +11,4 @@ Access
   access/edav_wcs_data.ipynb
   access/lpdaac_gedi_access.ipynb
   access/direct_access.ipynb
+  access/copc_access.ipynb
