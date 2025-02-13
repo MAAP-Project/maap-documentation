@@ -9,19 +9,29 @@ Release notes will mention the release date, a summary for each release, and com
 | February 19, 2025
 | Release with several important improvements. To use the new features, please start a new v4.2.0 workspace.
 
-Fixed
+Breaking Changes
+^^^^^^^^^^^^^^^^^^^
+* Updated most packages in all four base images. The Pangeo, isce3, and python images are pinned to versions in pangeo-notebook 2024.11.11 version
+* All images running on MAAP will now be using mini-forge to avoid licensing issues. Impacts:
+    * All conda installs will now pull from conda-forge
+    * No longer using R channel on anaconda (also continuing to not use the defaults channel)
+    * If you cannot find your package on conda-forge or another open source community channel, we recommend installing your package from their install instructions on their GitHub README or contact the platform team.
+    * Anaconda's new terms: https://www.anaconda.com/pricing/terms-of-service-faqs
+
+Added
 ^^^^^^^^^^^^^^^^^^^
 * Container URL in Algorithm Registration UI is now a dropdown where the default is the ``maap_base`` image which is the fastest for algorithm registration 
-* Updated most packages in all four base images. The Pangeo, isce3, and python images are pinned to versions in pangeo-notebook 2024.11.11 version
 * Added more packages requested by users for the R image, especially Geotrees specific packages like lasR, partykit, BIOMASS and tidyterra
-* Switched to miniforge and from R channel to avoid conda licensing issues 
 * The Algorithm-Registration UI input-boxes are narrower to help reduce the need for horizontal scrolling
+* Improvements to the Jobs UI: added job duration and more a obvious cancel button, and cleaned up the filter controls
+* Using the ``maap_base`` image as the base image for all workspace images
+
+Fixed
+^^^^^^^^^^^^^^^^^^^
 * Public ssh key is now correctly being pulled from MAAP profile page into ``/projects/.ssh/authorized_keys`` upon workspace launch if it was not already present
 * Display SSH info giving undefined error resolved 
 * Fixed status filtering issues for Jobs UI
-* Improvements to the Jobs UI: added job duration and more a obvious cancel button, and cleaned up the filter controls
 * Fixed a broken documentation link that shows up during algorithm registration 
-* Using the ``maap_base`` image as the base image for all workspace images
 
 -------------------------------------------------------------
 4.1.1
