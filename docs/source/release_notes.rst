@@ -14,7 +14,7 @@ Fixed
 * Updated most packages in all 4 base images. Pangeo, isce3, and python images tried to pin closely to versions in pangeo-notebook 2024.11.11 version
 * Added more packages requested by users for the R image, especially Geotrees specific packages like lasR, partykit, BIOMASS and tidyterra
 * Switched to miniforge and from R channel to avoid conda licensing issues 
-* Don't have to scroll for algorithm registration inputs
+* Made algorithm registration input text fields more narrow so don't have to scroll
 * Public ssh key is now correctly being pulled from MAAP profile page into /projects/.ssh/authorized_keys upon workspace launch if it was not already present
 * Display SSH info giving undefined error resolved 
 * Fixed status filtering issues for Jobs UI
