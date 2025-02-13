@@ -1,7 +1,8 @@
 Release Notes
 =======================================
 
-Release notes will mention the release date, a summary for each release, and then comprehensive descrptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+
 -------------------------------------------------------------
 4.2.0
 -------------------------------------------------------------
