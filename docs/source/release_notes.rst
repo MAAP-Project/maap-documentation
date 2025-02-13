@@ -1,7 +1,8 @@
 Release Notes
 =======================================
 
-Release notes will mention the release date, a summary for each release, and then comprehensive descrptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+
 -------------------------------------------------------------
 4.2.0
 -------------------------------------------------------------
@@ -10,17 +11,17 @@ Release notes will mention the release date, a summary for each release, and the
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
-* Container URL in algorithm registration is now a dropdown where the default is the maap base image which is the fastest for algorithm registration 
-* Updated most packages in all 4 base images. Pangeo, isce3, and python images tried to pin closely to versions in pangeo-notebook 2024.11.11 version
+* Container URL in Algorithm Registration UI is now a dropdown where the default is the ``maap_base`` image which is the fastest for algorithm registration 
+* Updated most packages in all four base images. The Pangeo, isce3, and python images are pinned to versions in pangeo-notebook 2024.11.11 version
 * Added more packages requested by users for the R image, especially Geotrees specific packages like lasR, partykit, BIOMASS and tidyterra
 * Switched to miniforge and from R channel to avoid conda licensing issues 
-* Made algorithm registration input text fields more narrow so don't have to scroll
-* Public ssh key is now correctly being pulled from MAAP profile page into /projects/.ssh/authorized_keys upon workspace launch if it was not already present
+* The Algorithm-Registration UI input-boxes are narrower to help reduce the need for horizontal scrolling
+* Public ssh key is now correctly being pulled from MAAP profile page into ``/projects/.ssh/authorized_keys`` upon workspace launch if it was not already present
 * Display SSH info giving undefined error resolved 
 * Fixed status filtering issues for Jobs UI
-* Improvement of Jobs UI from review like adding job duration and more obvious cancel button
-* Fixed broken documentation link for algorithm registration 
-* Using our maap_base image as the base image for all workspace images
+* Improvements to the Jobs UI: added job duration and more a obvious cancel button, and cleaned up the filter controls
+* Fixed a broken documentation link that shows up during algorithm registration 
+* Using the ``maap_base`` image as the base image for all workspace images
 
 -------------------------------------------------------------
 4.1.1
@@ -32,7 +33,7 @@ Fixed
 ^^^^^^^^^^^^^^^^^^^
 * Removed pygeos from all base images.
 * Increased number of records in the Jupyter Jobs UI to 200. 
-* Expanded s3 permissions for the maap-py `aws.workspace_bucket_credentials` function. Credentials for user bucket folders now include full read/write access. See `related documentation <system_reference_guide/accessing_bucket_data.html>`_. 
+* Expanded s3 permissions for the maap-py ``aws.workspace_bucket_credentials`` function. Credentials for user bucket folders now include full read/write access. See `related documentation <system_reference_guide/accessing_bucket_data.html>`_. 
 
 -------------------------------------------------------------
 4.1.0
@@ -65,7 +66,7 @@ Added
     * In order to use this new container, algorithm build scripts must specify all of the required libraries in their conda environment.yaml file. 
     * To use this new image, specify the following url during algorithm registration ``mas.maap-project.org/root/maap-workspaces/custom_images/maap_base:v4.1.0``.
 * MAAP DPS Sandbox queue
-    * A new queue `maap-dps-sandbox` has been added for quick testing of registered algorithms. 
+    * A new queue ``maap-dps-sandbox`` has been added for quick testing of registered algorithms. 
     * This new queue has limited resources (8gb), and a max run time of 10 minutes for algorithms.
     * The motivation for the queue is for users to quickly test their algorithm build, conda env, run script, input handling, etc.
     * This is the only queue available to Guest accounts
