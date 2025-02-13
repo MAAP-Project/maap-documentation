@@ -2,12 +2,31 @@ Release Notes
 =======================================
 
 Release notes will mention the release date, a summary for each release, and then comprehensive descrptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
+-------------------------------------------------------------
+4.2.0
+-------------------------------------------------------------
+| February 19, 2025
+| Release with several important improvements. To use the new features, please start a new v4.2.0 workspace.
+
+Fixed
+^^^^^^^^^^^^^^^^^^^
+* Container URL in algorithm registration is now a dropdown where the default is the maap base image which is the fastest for algorithm registration 
+* Updated most packages in all 4 base images. Pangeo, isce3, and python images tried to pin closely to versions in pangeo-notebook 2024.11.11 version
+* Added more packages requested by users for the R image, especially Geotrees specific packages like lasR, partykit, BIOMASS and tidyterra
+* Switched to miniforge and from R channel to avoid conda licensing issues 
+* Don't have to scroll for algorithm registration inputs
+* Public ssh key is now correctly being pulled from MAAP profile page into /projects/.ssh/authorized_keys upon workspace launch if it was not already present
+* Display SSH info giving undefined error resolved 
+* Fixed status filtering issues for Jobs UI
+* Improvement of Jobs UI from review like adding job duration and more obvious cancel button
+* Fixed broken documentation link for algorithm registration 
+* Using our maap_base image as the base image for all workspace images
 
 -------------------------------------------------------------
 4.1.1
 -------------------------------------------------------------
 | October 23, 2024
-| Minor release with non-breaking changes. To use the new features please start a new v4.1.1 workspace.
+| Minor release with non-breaking changes. To use the new features, please start a new v4.1.1 workspace.
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
@@ -19,7 +38,7 @@ Fixed
 4.1.0
 -------------------------------------------------------------
 | October 2, 2024
-| Release with several important improvements. To use the new features please start a new v4.1.0 workspace.
+| Release with several important improvements. To use the new features, please start a new v4.1.0 workspace.
 
 Significant Changes
 ^^^^^^^^^^^^^^^^^^^
