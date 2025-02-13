@@ -21,6 +21,7 @@ Breaking Changes
 Added
 ^^^^^^^^^^^^^^^^^^^
 * Container URL in Algorithm Registration UI is now a dropdown where the default is the ``maap_base`` image which is the fastest for algorithm registration 
+    * Users who would like to use this faster ``maap_base`` option must self manage their packages (i.e. in an environment.yml). More information in the docs `here <system_reference_guide/algorithm_registration.html#Container-URLs>`_
 * Added more packages requested by users for the R image, especially Geotrees specific packages like lasR, partykit, BIOMASS and tidyterra
 * The Algorithm-Registration UI input-boxes are narrower to help reduce the need for horizontal scrolling
 * Improvements to the Jobs UI: added job duration and more a obvious cancel button, and cleaned up the filter controls
