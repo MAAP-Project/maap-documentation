@@ -6,7 +6,7 @@ Release notes will mention the release date, a summary for each release, and com
 -------------------------------------------------------------
 4.2.0
 -------------------------------------------------------------
-| February 19, 2025
+| March 3, 2025
 | Release with several important improvements. To use the new features, please start a new v4.2.0 workspace.
 
 Breaking Changes
