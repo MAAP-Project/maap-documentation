@@ -37,20 +37,17 @@ Fixed
 * Fixed status filtering issues for Jobs UI
 * Fixed a broken documentation link that shows up during algorithm registration 
 
-
 -------------------------------------------------------------
 4.1.1
 -------------------------------------------------------------
 | October 23, 2024
-
 | Minor release with non-breaking changes. To use the new features, please start a new v4.1.1 workspace.
 
 Fixed
 ^^^^^^^^^^^^^^^^^^^
 * Removed pygeos from all base images.
 * Increased number of records in the Jupyter Jobs UI to 200. 
-* Expanded s3 permissions for the maap-py `aws.workspace_bucket_credentials` function. Credentials for user bucket folders now include full read/write access. See `related documentation <system_reference_guide/accessing_bucket_data.html>`_. 
-
+* Expanded s3 permissions for the maap-py ``aws.workspace_bucket_credentials`` function. Credentials for user bucket folders now include full read/write access. See `related documentation <system_reference_guide/accessing_bucket_data.html>`_. 
 
 -------------------------------------------------------------
 4.1.0
