@@ -14,7 +14,7 @@ Breaking Changes
 * Updated most packages in all four base images. The Pangeo, isce3, and python images are pinned to versions in pangeo-notebook 2024.11.11 version. Important package updates are:
     * R image: R from 4.2 to 4.3, added rhdf5 from Bioconductor, lidR, and lasR
     * Pangeo image: Xarray now 2024.10, Geopandas 1.0+, Numpy 2.0+, Python 3.12
-    * More all update package information here: https://github.com/MAAP-Project/maap-workspaces/pull/169/files 
+    * All updated packages here: https://github.com/MAAP-Project/maap-workspaces/pull/169/files 
 * All images running on MAAP will now be using mini-forge to avoid licensing issues. Impacts:
     * All conda installs will now pull from conda-forge
     * No longer using R channel on anaconda (also continuing to not use the defaults channel)
