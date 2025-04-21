@@ -13,3 +13,5 @@ Working with R
   working_with_r/access_cmr_r.ipynb
   working_with_r/maap_stac_r.ipynb
   working_with_r/access_aws_maap.ipynb
+  working_with_r/gedi_access_r.ipynb
+
