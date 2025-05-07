@@ -57,4 +57,4 @@ At a minimum, MAAP metadata should conform to STAC specification requirements. M
 
 ## Additional Resources
 - [STAC Collection Specification](https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md) 
-- [STAC Item Specification]()
+- [STAC Item Specification](https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md)
