@@ -12,7 +12,14 @@ At a minimum, MAAP metadata should conform to STAC specification requirements. M
 - `sci:doi`: **Required if available**. The DOI of the collection should be provided using the [Scientific Citation Extension Specification](https://github.com/stac-extensions/scientific/tree/main). 
   - For more information and resources about DOIs, see [Open Sourcing Code](../../science/oss_documentation/doi_and_licensing.ipynb).  
 - `description`: **Required** A detailed description or abstract for the dataset. The description should be useful to the science community, but also approachable for a first time user of the data. It is recommended to include information such as what platforms/instruments were/are used to collect the data, the parameters that are provided, the spatial and temporal coverage, and the purpose and/or intended use of the data.
-- `providers`: **Required**. The name of the organization(s) responsible for originating, processing, archiving, and/or distributing the dataset.
+- `providers`: **Required**. The name of the organization(s) responsible for originating, processing, archiving, and/or distributing the dataset. Multiple roles can belong to the same organization.
+  - Producer: the organization responsible for producing the data.
+    - Example: if a MAAP team collects or generates the data, add the "producer" role to the "MAAP" provider.
+  - Processor: the organization responsible for processing the data.
+    - Example: if a MAAP team processes the data (e.g., re-grids or re-projects the data to create a higher level product), add the "processor" role to the "MAAP" provider.
+  - Host: The organization responsible for storing or archiving the data.
+    - Example: if data are hosted in a MAAP bucket, add the "host" role to the "MAAP" provider.
+    - Example: if data are hosted in the NASA CMR, the "host" role would be added to the respective NASA DAAC.
 - `keywords`: **Required**. Keyword(s) that describe the parameters provided in the data.
   - This is a GCMD-controlled field: [Science Keywords CSV file](https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/sciencekeywords/?format=csv).
 - `links`: **Required**. Resources related to a collection. This should include a link to access the data. Other links to consider adding: user's guide, a dataset landing page, ATBD, read-me, the project home page, relevant online data tools, etc. 
