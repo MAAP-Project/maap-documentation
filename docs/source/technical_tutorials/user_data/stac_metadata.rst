@@ -183,3 +183,8 @@ fields.
 
 MAAP STAC Metadata Examples
 -----------------------------
+
+Additional Resources
+-----------------------------
+- `UMM-C Schema <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/collection>`__ 
+- `UMM-G Schema <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/granule>`__ 
