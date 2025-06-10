@@ -149,7 +149,7 @@ fields.
 -  ``stac_version``:sup:`1,2`: **Required**. The STAC version the collection
    implements.
    
-   - Note: UMM requires ``Metadata Specification``, which has a purpose similar to ``stac_version``.
+   - Note: UMM requires ``MetadataSpecification``, which has a purpose similar to ``stac_version``.
 
 `STAC Item-Level Metadata Fields <https://github.com/radiantearth/stac-spec/blob/master/item-spec/item-spec.md>`__
 ----------------------------------------------------------------------------------------------------------------------
@@ -191,7 +191,7 @@ fields.
 
 -  ``stac_version``:sup:`1,2`: **Required**. The STAC version the item implements.
 
-   - Note: UMM requires ``Metadata Specification``, which has a purpose similar to ``stac_version``.
+   - Note: UMM requires ``MetadataSpecification``, which has a purpose similar to ``stac_version``.
 
 -  ``type``:sup:`1`: **Required**. The type of the GeoJSON object.
 
@@ -276,4 +276,6 @@ We have only included a small portion of the metadata - click on the header to s
 Additional Resources
 -----------------------------
 - `UMM-C Schema <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/collection>`__ 
+- `Required UMM-C Elements (v1.18.4) <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/collection/v1.18.4/umm-c-json-schema.json#292>`__
 - `UMM-G Schema <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/granule>`__ 
+- `Required UMM-G Elements (v1.6.6) <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/granule/v1.6.6/umm-g-json-schema.json#139>`__
