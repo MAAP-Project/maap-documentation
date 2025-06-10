@@ -271,7 +271,7 @@ We have only included a small portion of the metadata - click on the header to s
          ...
          },
       ...
-      }
+   }
 
 Additional Resources
 -----------------------------
