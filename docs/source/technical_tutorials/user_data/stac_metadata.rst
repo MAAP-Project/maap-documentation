@@ -34,11 +34,14 @@ fields.
 `STAC Collection-Level Metadata Fields <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md>`__
 ----------------------------------------------------------------------------------------------------------------------------------------
 
--  ``id``:sup:`1,2`: **Required**. The unique identifier of the collection.
+-  ``id``:sup:`1,2`: **Required**. The unique identifier of the collection. 
+
 -  ``version``:sup:`2`: **Required**. The version of the data. This is different
    than the ``stac_version`` element.
+
 -  ``title``:sup:`1,2`: **Required**. A short descriptive title of the datatset.
    This should differ from the ``id``.
+
 -  ``sci:doi``:sup:`2`: **Required if available**. The DOI of the collection
    should be provided using the `Scientific Citation Extension
    Specification <https://github.com/stac-extensions/scientific/tree/main>`__.
@@ -53,6 +56,7 @@ fields.
    platforms/instruments were/are used to collect the data, the
    parameters that are provided, the spatial and temporal coverage, and
    the purpose and/or intended use of the data.
+
 -  ``providers``:sup:`2`: **Required**. The name of the organization(s)
    responsible for originating, processing, archiving, and/or
    distributing the dataset. Multiple roles can belong to the same
@@ -87,6 +91,7 @@ fields.
    should include a link to access the data. Other links to consider
    adding: user’s guide, a dataset landing page, ATBD, read-me, the
    project home page, relevant online data tools, etc.
+
 -  ``extent``:
 
    -  ``spatial``:sup:`1,2`: **Required**. The spatial extent of the collection,
@@ -111,8 +116,10 @@ fields.
       with which the collection is associated, including but not limited
       to field or flight campaigns, projects, missions, scientific
       programs, etc.
+
    -  ``gsd``:sup:`3`: **Required**. The spatial resolution of the
       data in meters.
+
    -  ``processing:level``:sup:`2`: **Required**. The level at which the data in
       the collection are processed, with values ranging from L0 to L4.
 
@@ -129,6 +136,7 @@ fields.
       Code <../../science/oss_documentation/doi_and_licensing.ipynb>`__.
 
 -  ``sci:citation``:sup:`3`: **Required**. The collection citation.
+
 -  ``item_assets``:
 
    -  ``type``:sup:`2`: **Required**. The media type of the asset.
@@ -147,17 +155,22 @@ fields.
 ----------------------------------------------------------------------------------------------------------------------
 
 -  ``id``:sup:`1,2`: **Required**. The unique identifier of the item.
+
 -  ``collection``:sup:`1,2`: **Required**. The ID of the STAC collection that the
    item is associated with.
+
 -  ``geometry``:sup:`1`: **Required**. The full footprint of the asset
    represented by the item.
+
 -  ``bbox``:sup:`1`: **Required IF geometry is not null**. The bounding box
    of the asset represented by the item.
+
 -  ``properties``:
 
    -  ``datetime``:sup:`1`: **Required**. The temporal extent of the item. If
       the temporal extent is a date range, ``start_datetime`` and
       ``end_datetime`` can be provided.
+
    -  A provider date is also **required** per UMM, and presents a date
       associated with changes made to the item in the database which it
       is stored. At least one provider date should be given. Options
@@ -169,6 +182,7 @@ fields.
       -  ``updated_datetime``: the date the item file was last updated.
 
 -  ``links``:sup:`1`: **Required**. Links to resources and related URLs.
+
 -  ``assets``:
 
    -  ``href``:sup:`1`: **Required**. Link to download the asset object.
@@ -183,6 +197,81 @@ fields.
 
 MAAP STAC Metadata Examples
 -----------------------------
+Below are metadata examples created for MAAP's `"ICESat-2 Boreal v2.1: Gridded Aboveground Biomass Density" <https://stac-browser.maap-project.org/collections/icesat2-boreal-v2.1-agb>`__ dataset.
+We have only included a small portion of the metadata - click on the header to see the full example json files.
+
+`Collection <https://github.com/MAAP-Project/icesat2-boreal-stac/blob/main/examples/agb/collection.json>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: json
+  
+  "item_assets": {
+    "cog": {
+      "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+      "roles": [
+        "data"
+      ],
+      "gsd": 30,
+      "processing:level": "L4",
+      ...
+     }
+   },
+
+   "license": "CC-BY",
+
+   "summaries": {
+      "platform": [
+         "LANDSAT-8",
+         "LANDSAT-9",
+         "SENTINEL-2A",
+         "SENTINEL-2B",
+         "ICESat-2"
+      ],
+      "gsd": {
+         "minimum": 30,
+         "maximum": 30
+     }
+   },
+   
+   "stac_extensions": [
+      "https://stac-extensions.github.io/version/v1.2.0/schema.json",
+      "https://stac-extensions.github.io/processing/v1.2.0/schema.json",
+      "https://stac-extensions.github.io/render/v2.0.0/schema.json",
+      "https://stac-extensions.github.io/scientific/v1.0.0/schema.json"
+   ]
+
+
+`Item <https://github.com/MAAP-Project/icesat2-boreal-stac/blob/main/examples/agb/boreal_agb_2020_202411251732556086_0000004/boreal_agb_2020_202411251732556086_0000004.json>`__
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+.. code-block:: json
+
+  "properties": {
+    "start_datetime": "2020-01-01T00:00:00+00:00",
+    "end_datetime": "2020-12-31T23:59:59+00:00",
+    "created_datetime": "2024-01-25T00:11:00+00:00",
+    "proj:epsg": null,
+    "proj:geometry": {
+      "type": "Polygon",
+      "coordinates": [
+        [
+          [
+            -2241478.0000000047,
+            9243304.00000001
+          ],
+          ...
+   },
+
+    "assets": {
+      "cog": {
+         "href": "s3://maap-ops-workspace/aliz237/dps_output/run_boreal_biomass_map/dev_v1.5/AGB_H30_2020/full_run/2024/11/25/09/38/51/560230/boreal_agb_2020_202411251732556086_0000004.tif",
+         "type": "image/tiff; application=geotiff; profile=cloud-optimized",
+         "title": "Gridded predictions of aboveground biomass (Mg/ha)",
+         "description": "Gridded predictions of aboveground biomass (Mg/ha)",
+         "gsd": 30,
+         "processing:level": "L4",
+         ...
+         },
+      ...
+      }
 
 Additional Resources
 -----------------------------
