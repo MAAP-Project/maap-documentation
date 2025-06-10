@@ -279,3 +279,4 @@ Additional Resources
 - `Required UMM-C Elements (v1.18.4) <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/collection/v1.18.4/umm-c-json-schema.json#292>`__
 - `UMM-G Schema <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/granule>`__ 
 - `Required UMM-G Elements (v1.6.6) <https://git.earthdata.nasa.gov/projects/EMFD/repos/unified-metadata-model/browse/granule/v1.6.6/umm-g-json-schema.json#139>`__
+- `CEOS EO collection and granule discovery best practices with STAC <https://github.com/ceos-org/stac-collection-and-granule-discovery-best-practices/blob/main/README.md>`__
