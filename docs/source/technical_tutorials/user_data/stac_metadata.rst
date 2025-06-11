@@ -23,13 +23,11 @@ Requirements are noted by schema as follows:
 
 - ``element``:sup:`3`: not required by STAC or UMM, but still required by MAAP
 
-**Note**: NASA CMR also uses Global Change Master Directory (GCMD)
-Keywords to help with consistency and searchability. As a best practice,
-MAAP recommends using GCMD keywords in applicable fields, which are
-noted below. For more information, see `“GCMD Keyword
-Viewer” <https://www.earthdata.nasa.gov/data/tools/idn/gcmd-keyword-viewer>`__.
-Downloadable CSV files of GCMD keywords are also provided for relevant
-fields.
+General Notes
+--------------
+- NASA CMR also uses Global Change Master Directory (GCMD) Keywords to help with consistency and searchability. As a best practice, MAAP recommends using GCMD keywords in applicable fields, which are noted below. For more information, see `“GCMD Keyword Viewer” <https://www.earthdata.nasa.gov/data/tools/idn/gcmd-keyword-viewer>`__. Downloadable CSV files of GCMD keywords are also provided for relevant fields.
+
+- For `links`, collection `item_assets`, and item `assets`, the "href" attributions should be absolute paths and not relative paths.
 
 `STAC Collection-Level Metadata Fields <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md>`__
 ----------------------------------------------------------------------------------------------------------------------------------------
@@ -62,24 +60,29 @@ fields.
    distributing the dataset. Multiple roles can belong to the same
    organization.
 
-   -  Producer: the organization responsible for producing the data.
+   - This is a GCMD-controlled field: `Providers CSV file <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/providers?format=csv>`__.
+      - Note: "MAAP" is currently not on the GCMD list of providers. Please still include "MAAP" as a provider if applicable.
 
-      -  Example: if a MAAP team collects or generates the data, add the
-         “producer” role to the “MAAP” provider.
+   - Provider roles:
 
-   -  Processor: the organization responsible for processing the data.
+      -  Producer: the organization responsible for producing the data.
 
-      -  Example: if a MAAP team processes the data (e.g., re-grids or
-         re-projects the data to create a higher level product), add the
-         “processor” role to the “MAAP” provider.
+         -  Example: if a MAAP team collects or generates the data, add the
+            “producer” role to the “MAAP” provider.
 
-   -  Host: The organization responsible for storing or archiving the
-      data.
+      -  Processor: the organization responsible for processing the data.
 
-      -  Example: if data are hosted in a MAAP bucket, add the “host”
-         role to the “MAAP” provider.
-      -  Example: if data are hosted in the NASA CMR, the “host” role
-         would be added to the respective NASA DAAC.
+         -  Example: if a MAAP team processes the data (e.g., re-grids or
+            re-projects the data to create a higher level product), add the
+            “processor” role to the “MAAP” provider.
+
+      -  Host: The organization responsible for storing or archiving the
+         data.
+
+         -  Example: if data are hosted in a MAAP bucket, add the “host”
+            role to the “MAAP” provider.
+         -  Example: if data are hosted in the NASA CMR, the “host” role
+            would be added to the respective NASA DAAC.
 
 -  ``keywords``:sup:`2`: **Required**. Keyword(s) that describe the parameters
    provided in the data.
@@ -116,6 +119,8 @@ fields.
       with which the collection is associated, including but not limited
       to field or flight campaigns, projects, missions, scientific
       programs, etc.
+
+      - This is a GCMD-controlled field: `Projects CSV file <https://gcmd.earthdata.nasa.gov/kms/concepts/concept_scheme/projects/?format=csv>`__ 
 
    -  ``gsd``:sup:`3`: **Required**. The spatial resolution of the
       data in meters.
@@ -182,6 +187,8 @@ fields.
       -  ``updated_datetime``: the date the item file was last updated.
 
 -  ``links``:sup:`1`: **Required**. Links to resources and related URLs.
+
+   - Note: "href" attributions should be absolute paths and not relative paths.
 
 -  ``assets``:
 
