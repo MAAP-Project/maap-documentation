@@ -7,3 +7,4 @@ This section will help manage known issues and debugging tips.
   :maxdepth: 2
 
   troubleshooting/account_not_activated.ipynb
+  troubleshooting/dps_error_codes.ipynb
