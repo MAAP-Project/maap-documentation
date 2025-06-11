@@ -188,8 +188,6 @@ General Notes
 
 -  ``links``:sup:`1`: **Required**. Links to resources and related URLs.
 
-   - Note: "href" attributions should be absolute paths and not relative paths.
-
 -  ``assets``:
 
    -  ``href``:sup:`1`: **Required**. Link to download the asset object.
