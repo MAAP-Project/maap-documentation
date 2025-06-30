@@ -27,7 +27,7 @@ General Notes
 --------------
 - NASA CMR also uses Global Change Master Directory (GCMD) Keywords to help with consistency and searchability. As a best practice, MAAP recommends using GCMD keywords in applicable fields, which are noted below. For more information, see `“GCMD Keyword Viewer” <https://www.earthdata.nasa.gov/data/tools/idn/gcmd-keyword-viewer>`__. Downloadable CSV files of GCMD keywords are also provided for relevant fields.
 
-- For ``links``, collection ``item_assets``, and item ``assets``, the "href" attributions should be absolute paths and not relative paths.
+- For ``links`` and item ``assets``, the "href" attributions should be absolute paths and not relative paths.
 
 `STAC Collection-Level Metadata Fields <https://github.com/radiantearth/stac-spec/blob/master/collection-spec/collection-spec.md>`__
 ----------------------------------------------------------------------------------------------------------------------------------------
