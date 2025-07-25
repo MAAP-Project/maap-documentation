@@ -19,7 +19,7 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/ATL03/ATL03.ipynb
   science/ATL08/ATL08.ipynb
   science/NISAR/Simulated_NISAR.ipynb
-  science/NISAR/OPERA_Surface_Displacement.ipynb
+  science/OPERA/OPERA_Surface_Displacement.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
   science/ESA_CCI/ESA_CCI_V4.ipynb
