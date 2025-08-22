@@ -23,4 +23,5 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
   science/ESA_CCI/ESA_CCI_V4.ipynb
+  science/ESA_CCI/ESA_CCI_V5_Token_Access.ipynb
   science/oss_documentation.rst
