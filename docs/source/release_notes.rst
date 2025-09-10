@@ -4,6 +4,23 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+4.3.0
+-------------------------------------------------------------
+| September 10, 2025
+| Release with several important improvements. To use the new features, please start a new v4.3.0 workspace.
+
+Breaking changes
+^^^^^^^^^^^^
+* Update to R 4.4.3 to resolve vulnerability CVE-2024-27322 https://nvd.nist.gov/vuln/detail/CVE-2024-27322 
+* This vulnerability enabled a maliciously crafted RDS (R Data Serialization) formatted file or R package to run arbitrary code on an end user’s system when interacted with
+* Updated packages in the R image 
+* Removed basemap, r-lwgeom and r-tmap packages to be able to update R 
+
+Added
+^^^^^^^^^^^^
+* Improved security and error handling for the MAAP API 
+
+-------------------------------------------------------------
 4.2.0
 -------------------------------------------------------------
 | March 3, 2025
