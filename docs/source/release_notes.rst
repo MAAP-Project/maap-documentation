@@ -18,7 +18,7 @@ Breaking changes
 
 Added
 ^^^^^^^^^^^^
-* Security updates and better error handling for the API 
+* Improved security and error handling for the MAAP API 
 
 -------------------------------------------------------------
 4.2.0
