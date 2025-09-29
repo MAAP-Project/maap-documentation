@@ -11,5 +11,5 @@ Visualize
   visualization/interval_color_mapping.ipynb
   visualization/stac_ipyleaflet.ipynb
   visualization/visualize_lonboard.ipynb
-  visualization/Visualizing OPERA-DISP tile with TiTiler-MultiDim.ipynb
+  visualization/Visualizing_OPERA-DISP_tile_with_TiTiler-MultiDim.ipynb
 
