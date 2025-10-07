@@ -15,6 +15,7 @@ It is often referenced from the application-focused Science and Technical tutori
   system_reference_guide/algorithm_registration.ipynb
   system_reference_guide/jobsui.ipynb
   system_reference_guide/jobs_maappy.ipynb
+  system_reference_guide/maappy_algorithms_jobs.ipynb
   system_reference_guide/dps_queues.ipynb
   system_reference_guide/work_with_git.ipynb
   system_reference_guide/organizations.ipynb
