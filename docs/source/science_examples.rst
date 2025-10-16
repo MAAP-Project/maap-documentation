@@ -25,3 +25,4 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/ESA_CCI/ESA_CCI_V4.ipynb
   science/ESA_CCI/ESA_CCI_V5_Token_Access.ipynb
   science/oss_documentation.rst
+  science/EarthCARE/EarthCARE_access_and_visualize.ipynb
