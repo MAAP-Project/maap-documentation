@@ -10,6 +10,7 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   :caption: Science Examples:
 
 
+  science/HLS/HLS-STAC-geoparquet.ipynb
   science/HLS/HLSL30.ipynb
   science/GEDI/GEDI_L2A.ipynb
   science/GEDI/GEDI_L2B.ipynb
