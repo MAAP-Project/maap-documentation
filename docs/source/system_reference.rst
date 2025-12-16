@@ -9,7 +9,6 @@ It is often referenced from the application-focused Science and Technical tutori
   :maxdepth: 2
   :caption: System Reference Guide:
   
-  system_reference_guide/2i2c_hub_overview.ipynb
   system_reference_guide/create_workspace.ipynb
   system_reference_guide/custom-environments.ipynb
   system_reference_guide/share_data.ipynb
