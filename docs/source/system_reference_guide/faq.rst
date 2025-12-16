@@ -10,3 +10,4 @@ FAQ
   faq/request_data.ipynb
   faq/delete_algorithm_from_mas.ipynb
   faq/hideshow_sidebar.ipynb
+  faq/ade_to_hub.ipynb
