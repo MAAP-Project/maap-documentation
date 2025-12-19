@@ -16,6 +16,21 @@ import os
 
 def setup(app):
     app.add_css_file('custom.css')
+    # Add Leaflet CSS and JS for R htmlwidgets
+    app.add_css_file('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css',
+                     integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=',
+                     crossorigin='anonymous')
+    app.add_js_file('https://unpkg.com/leaflet@1.9.4/dist/leaflet.js',
+                    integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=',
+                    crossorigin='anonymous')
+    # Add Proj4js and Leaflet.Proj for coordinate transformations
+    app.add_js_file('https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.9.0/proj4.js',
+                    crossorigin='anonymous')
+    app.add_js_file('https://cdn.jsdelivr.net/npm/proj4leaflet@1.0.2/src/proj4leaflet.js',
+                    crossorigin='anonymous')
+    # Add Leaflet providers for base maps
+    app.add_js_file('https://unpkg.com/leaflet-providers@1.13.0/leaflet-providers.js',
+                    crossorigin='anonymous')
 
 
 # -- Project information -----------------------------------------------------
@@ -37,6 +52,12 @@ extensions = [
 ]
 
 nbsphinx_execute = 'never'
+
+# Enable RequireJS for HTML widgets (needed for R leaflet maps)
+nbsphinx_requirejs_path = 'https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js'
+nbsphinx_requirejs_options = {
+    'crossorigin': 'anonymous',
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
