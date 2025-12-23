@@ -27,3 +27,5 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/oss_documentation.rst
   science/EarthCARE/EarthCARE_access_and_visualize.ipynb
   science/GEE/gee.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Data_Access.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Simulated_Data_Access.ipynb
