@@ -12,4 +12,5 @@ Visualize
   visualization/stac_ipyleaflet.ipynb
   visualization/visualize_lonboard.ipynb
   visualization/Visualizing_OPERA-DISP_tile_with_TiTiler-MultiDim.ipynb
+  visualization/visualizing_NISAR_BIOMASS
 
