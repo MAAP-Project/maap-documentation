@@ -20,6 +20,8 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/ATL03/ATL03.ipynb
   science/ATL08/ATL08.ipynb
   science/NISAR/NISAR_access.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Data_Access.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Simulated_Data_Access.ipynb
   science/OPERA/OPERA_Surface_Displacement.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
@@ -27,6 +29,3 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/ESA_CCI/ESA_CCI_V5_Token_Access.ipynb
   science/oss_documentation.rst
   science/EarthCARE/EarthCARE_access_and_visualize.ipynb
-  science/GEE/gee.ipynb
-  science/ESA_BIOMASS/ESA_BIOMASS_Simulated_Data_Access.ipynb
-  science/ESA_BIOMASS/ESA_BIOMASS_Data_Access.ipynb
