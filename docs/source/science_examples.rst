@@ -10,6 +10,7 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   :caption: Science Examples:
 
 
+  science/HLS/HLS-STAC-geoparquet.ipynb
   science/HLS/HLSL30.ipynb
   science/GEDI/GEDI_L2A.ipynb
   science/GEDI/GEDI_L2B.ipynb
@@ -18,7 +19,9 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/GEDI/GEDI_L4B.ipynb
   science/ATL03/ATL03.ipynb
   science/ATL08/ATL08.ipynb
-  science/NISAR/Simulated_NISAR.ipynb
+  science/NISAR/NISAR_access.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Data_Access.ipynb
+  science/ESA_BIOMASS/ESA_BIOMASS_Simulated_Data_Access.ipynb
   science/OPERA/OPERA_Surface_Displacement.ipynb
   science/AfriSAR/AfriSAR_AGB.ipynb
   science/LVIS/accessing_LVIS_data.ipynb
