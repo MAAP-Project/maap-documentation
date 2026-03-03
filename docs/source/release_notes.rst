@@ -4,6 +4,33 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+5.1.0
+-------------------------------------------------------------
+| March 3, 2026
+| Release with several important improvements. To use the new features, please start a new v5.1.0 workspace.
+
+Breaking changes
+^^^^^^^^^^^^
+* Updated to R 4.5.1
+* Updated packages in the R, Pangeo, and Isce3 images
+* Isce3 image has gdal bump from 3.11.4 to 3.11.5 
+* R image is using awsv2 aliased as aws 
+
+
+Fixed
+^^^^^^^^^^^^
+* RStudio fixes: AWS access and DPS job submissions with maap-py 
+* TensorFlow2 and PyTorch GPU images upgraded to Pangeo 2025.12.30
+* Pangeo image upgraded to Pangeo 2025.12.30
+* Isce3 image upgraded to Pangeo 2026.01.21
+* MAAP API improvements for authentication  
+
+
+Added
+^^^^^^^^^^^^
+* TensorFlow2 and PyTorch GPU images with MAAP extensions (Pangeo 2025.12.30)
+
+-------------------------------------------------------------
 4.3.0
 -------------------------------------------------------------
 | September 10, 2025
