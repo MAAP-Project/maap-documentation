@@ -20,7 +20,7 @@ You can also find links to Open Source Science guidelines for the MAAP platform.
   science/ATL03/ATL03.ipynb
   science/ATL08/ATL08.ipynb
   science/NISAR/NISAR_access.ipynb
-  science/NISAR/NISAR_dem.ipynb
+  science/NISAR/NISAR_DEM.ipynb
   science/ESA_BIOMASS/ESA_BIOMASS_Data_Access.ipynb
   science/ESA_BIOMASS/ESA_BIOMASS_Simulated_Data_Access.ipynb
   science/OPERA/OPERA_Surface_Displacement.ipynb
