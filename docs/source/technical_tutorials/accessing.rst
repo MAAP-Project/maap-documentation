@@ -14,3 +14,4 @@ Access
   access/lpdaac_gedi_access.ipynb
   access/direct_access.ipynb
   working_with_r/find_data_in_r.rst
+  access/external_access_from_hub.ipynb
