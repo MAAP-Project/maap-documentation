@@ -11,6 +11,7 @@ It is often referenced from the application-focused Science and Technical tutori
   
   system_reference_guide/create_workspace.ipynb
   system_reference_guide/custom-environments.ipynb
+  system_reference_guide/disk_guide.ipynb
   system_reference_guide/share_data.ipynb
   system_reference_guide/algorithm_registration.ipynb
   system_reference_guide/jobsui.ipynb
