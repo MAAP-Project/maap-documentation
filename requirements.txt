@@ -11,3 +11,5 @@ folium
 pandas
 rioxarray
 sphinx-copybutton
+rio-stac
+pystac
