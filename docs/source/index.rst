@@ -5,6 +5,8 @@
 
 Welcome to the MAAP User Documentation!
 =======================================
+.. attention::
+    MAAP is transitioning from the ADE to Jupyterhub, and new Jupyterhub documentation is being added. For access to *ADE only* documentation, please see the `last-ade-release <https://docs.maap-project.org/en/last-ade-release/>`_. 
 
 .. toctree::
   :maxdepth: 1
