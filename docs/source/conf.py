@@ -121,7 +121,13 @@ latex_documents = [
 ]
 
 # Exclude notebooks from LaTeX/PDF to prevent timeout
-exclude_patterns += [
-    'technical_tutorials/working_with_r/*.ipynb',
-    'science/**/*.ipynb',
+# Notebooks with large images/outputs cause LaTeX to timeout on Read the Docs
+# They will still be available in the HTML documentation
+latex_exclude_patterns = [
+    '**/*.ipynb',
 ]
+
+# Only apply notebook exclusions for LaTeX builds
+import sys
+if 'latex' in sys.argv or 'latexpdf' in sys.argv:
+    exclude_patterns += latex_exclude_patterns
