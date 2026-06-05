@@ -101,3 +101,27 @@ if os.environ.get("READTHEDOCS", "") == "True":
 	if "html_context" not in globals():
         	html_context = {}
 	html_context["READTHEDOCS"] = True
+
+# -- Options for LaTeX output ------------------------------------------------
+
+latex_engine = 'pdflatex'
+latex_elements = {
+    'papersize': 'letterpaper',
+    'pointsize': '10pt',
+    'preamble': r'''
+\usepackage{charter}
+\usepackage[defaultsans]{lato}
+\usepackage{inconsolata}
+''',
+}
+
+latex_documents = [
+    (master_doc, 'maap-project.tex', 'MAAP Documentation',
+     'NASA MAAP Team', 'manual'),
+]
+
+# Exclude notebooks from LaTeX/PDF to prevent timeout
+exclude_patterns += [
+    'technical_tutorials/working_with_r/*.ipynb',
+    'science/**/*.ipynb',
+]
