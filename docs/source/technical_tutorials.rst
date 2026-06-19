@@ -16,3 +16,4 @@ This section of the documentation includes hands-on tutorials with example algor
   technical_tutorials/querying.rst
   technical_tutorials/user_data.rst
   technical_tutorials/working_with_r.rst
+  technical_tutorials/ogc.rst

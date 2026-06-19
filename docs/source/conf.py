@@ -101,3 +101,33 @@ if os.environ.get("READTHEDOCS", "") == "True":
 	if "html_context" not in globals():
         	html_context = {}
 	html_context["READTHEDOCS"] = True
+
+# -- Options for LaTeX output ------------------------------------------------
+
+latex_engine = 'pdflatex'
+latex_elements = {
+    'papersize': 'letterpaper',
+    'pointsize': '10pt',
+    'preamble': r'''
+\usepackage{charter}
+\usepackage[defaultsans]{lato}
+\usepackage{inconsolata}
+''',
+}
+
+latex_documents = [
+    (master_doc, 'maap-project.tex', 'MAAP Documentation',
+     'NASA MAAP Team', 'manual'),
+]
+
+# Exclude notebooks from LaTeX/PDF to prevent timeout
+# Notebooks with large images/outputs cause LaTeX to timeout on Read the Docs
+# They will still be available in the HTML documentation
+latex_exclude_patterns = [
+    '**/*.ipynb',
+]
+
+# Only apply notebook exclusions for LaTeX builds
+import sys
+if 'latex' in sys.argv or 'latexpdf' in sys.argv:
+    exclude_patterns += latex_exclude_patterns
