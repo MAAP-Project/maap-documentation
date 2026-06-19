@@ -82,7 +82,7 @@ Migration Steps:
 
 1. Identify where your code is using https://cmr.maap-project.org and which datasets are being discovered and accessed.
 2. Once you've identified the datasets, use https://search.earthdata.nasa.gov or https://stac-browser.maap-project.org to find out if the dataset is available through NASA's Operational CMR or MAAP's STAC catalog. If you don't see your datasets in one of those places, reach out to the data team so they can prioritize that dataset for publication to MAAP STAC.
-3. If the dataset is in NASA's Operational CMR and you're using MAAP's Python library ``maap-py`` to discover and access data, add the parameter ``cmr_host="cmr.earthdata.nasa.gov"`` to your ``maap.searchCollection`` and ``maap.searchGranule`` function calls. Update the ``concept_id`` to match the one from NASA's Operational CMR if you're using it to identify a specific collection or granule.
+3. If the dataset is in NASA's Operational CMR and you're using MAAP's Python library ``maap-py`` to discover and access data, add the parameter ``cmr_host="cmr.earthdata.nasa.gov"`` to your ``maap.search_collection`` and ``maap.search_granule`` function calls. Update the ``concept_id`` to match the one from NASA's Operational CMR if you're using it to identify a specific collection or granule.
 4. If the dataset is in MAAP STAC, use ``pystac_client`` (https://pystac-client.readthedocs.io/en/stable/) or an HTTP library to call the STAC HTTP API endpoints directly.
 
 Examples:
@@ -96,7 +96,7 @@ The code below discovers granules from the ``ABoVE LVIS L2 Geolocated Surface El
 .. code-block:: python
 
   COLLECTION_ID = 'C1200125288-NASA_MAAP' 
-  results = maap.searchGranule(concept_id=COLLECTION_ID)
+  results = maap.search_granule(concept_id=COLLECTION_ID)
   pprint(f'Got {len(results)} results')
 
 This dataset exists in NASA's Operational CMR. Using https://search.earthdata.nasa.gov, I discovered the collection's ``concept_id`` by searching for "ABoVE LVIS L2 Geolocated Surface Elevation Product" and copying the ``concept_id`` from the URL of the result to modify the code below:
@@ -104,7 +104,7 @@ This dataset exists in NASA's Operational CMR. Using https://search.earthdata.na
 .. code-block:: python
 
   COLLECTION_ID = 'C1513105984-NSIDC_ECS'
-  results = maap.searchGranule(
+  results = maap.search_granule(
     cmr_host='cmr.earthdata.nasa.gov',
     concept_id=COLLECTION_ID
   )
@@ -119,7 +119,7 @@ This code discovers granules from the ``Landsat 8 Operational Land Imager (OLI) 
 
   COLLECTION_ID = 'C1200110769-NASA_MAAP' 
 
-  results = maap.searchGranule(concept_id=COLLECTION_ID)
+  results = maap.search_granule(concept_id=COLLECTION_ID)
   pprint(f'Got {len(results)} results')
 
 
