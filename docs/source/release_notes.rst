@@ -4,6 +4,31 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+6.0.0
+-------------------------------------------------------------
+| July 6, 2026
+| Release with images and API adhering to Open Geospatial Consortium standards. To use the new features, please start a new v6.0.0 workspace in 2i2c.
+
+Breaking changes
+^^^^^^^^^^^^
+* Can no longer register new non OGC algorithms, but can still run old non OGC algorithms
+
+Fixed
+^^^^^^^^^^^^
+* Reduced the build time of the R image by 75%
+
+Added
+^^^^^^^^^^^^
+* TensorFlow2 and PyTorch GPU images with and without MAAP extensions upgraded to Pangeo 2026.06.04
+* Pangeo image upgraded to Pangeo 2026.06.04
+* Isce3 image upgraded to Pangeo 2026.01.30
+* rclone package added to all MAAP images and configured maap-s3 rclone remote 
+* Improved Jobs and algorithms UIs 
+* New launcher to view algorithm build and deployments 
+* Can configure variable settings like PGT token, workspace bucket, API endpoint in JupyterLab settings editor
+* Updated functions in maap-py to call OGC endpoints and use snakecase consistent with Python standards 
+
+-------------------------------------------------------------
 5.1.0
 -------------------------------------------------------------
 | March 3, 2026
