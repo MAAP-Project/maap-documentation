@@ -11,7 +11,7 @@ Release notes will mention the release date, a summary for each release, and com
 
 Breaking changes
 ^^^^^^^^^^^^
-* Can view all OGC algorithms in the new Algorithm Catalog extension 
+* Can only view OGC algorithms in the new Algorithm Catalog extension 
 
 Fixed
 ^^^^^^^^^^^^
@@ -26,7 +26,7 @@ Added
 * Improved Jobs and algorithms UIs 
 * New launcher to view algorithm build and deployments 
 * Can configure variable settings like PGT token, workspace s3 bucket, API endpoint in JupyterLab settings editor
-* Updated functions in maap-py to call OGC endpoints and use snakecase consistent with Python standards 
+* Updated functions in maap-py to call OGC endpoints and use snakecase consistent with Python standards, parameters may be different too 
 
 -------------------------------------------------------------
 5.1.0
