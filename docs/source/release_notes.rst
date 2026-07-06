@@ -11,7 +11,7 @@ Release notes will mention the release date, a summary for each release, and com
 
 Breaking changes
 ^^^^^^^^^^^^
-* Can no longer register new non OGC algorithms, but can still run old non OGC algorithms
+* Can view all OGC algorithms in the new Algorithm Catalog extension 
 
 Fixed
 ^^^^^^^^^^^^
@@ -25,7 +25,7 @@ Added
 * rclone package added to all MAAP images and configured maap-s3 rclone remote 
 * Improved Jobs and algorithms UIs 
 * New launcher to view algorithm build and deployments 
-* Can configure variable settings like PGT token, workspace bucket, API endpoint in JupyterLab settings editor
+* Can configure variable settings like PGT token, workspace s3 bucket, API endpoint in JupyterLab settings editor
 * Updated functions in maap-py to call OGC endpoints and use snakecase consistent with Python standards 
 
 -------------------------------------------------------------
