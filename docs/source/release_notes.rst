@@ -19,14 +19,27 @@ Fixed
 
 Added
 ^^^^^^^^^^^^
-* TensorFlow2 and PyTorch GPU images with and without MAAP extensions upgraded to Pangeo 2026.06.04
-* Pangeo image upgraded to Pangeo 2026.06.04
-* Isce3 image upgraded to Pangeo 2026.01.30
-* rclone package added to all MAAP images and configured maap-s3 rclone remote 
 * Improved Jobs and algorithms UIs 
 * New launcher to view algorithm build and deployments 
 * Can configure variable settings like PGT token, workspace s3 bucket, API endpoint in JupyterLab settings editor
 * Updated functions in maap-py to call OGC endpoints and use snakecase consistent with Python standards, parameters may be different too 
+
+
+-------------------------------------------------------------
+5.2.0
+-------------------------------------------------------------
+| July 6, 2026
+
+Fixed
+^^^^^^^^^^^^
+* Reduced the build time of the R image by 75%
+
+Added
+^^^^^^^^^^^^
+* TensorFlow2 and PyTorch GPU images with and without MAAP extensions upgraded to Pangeo 2026.06.04
+* Pangeo image upgraded to Pangeo 2026.06.04
+* Isce3 image upgraded to Pangeo 2026.01.30
+* rclone package added to all MAAP images and configured maap-s3 rclone remote 
 
 -------------------------------------------------------------
 5.1.0
