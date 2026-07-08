@@ -15,19 +15,23 @@ An OGC application package bundles a `Common Workflow Language (CWL) <https://ww
 
 To get started, select the path below that best describes your situation:
 
-- **I am an existing MAAP user. How do I update my existing algorithm to run as an OGC application package?** 
+- **I am an existing MAAP user. I have a non-OGC algorithm deployed to the MAAP. How do I convert my algorithm into an OGC application package?** 
   
   Follow the :doc:`transition docs <ogc/transition_to_ogc>` tutorial to register your algorithm as an OGC application package.
 
-- **I am an existing MAAP user. How do I register a new algorithm as an OGC application package?** 
+  See also the :doc:`OGC-App-Pack GitHub action <ogc/ogc_app_pack_gha>`, which allows users to build & deploy OGC application packages to the MAAP from GitHub directly.
+
+- **I am an existing MAAP user. I do not have an algorithm on the MAAP. How do I register a new algorithm as an OGC application package?** 
 
   Follow the :doc:`application package guide <ogc/build_application_packages>` tutorial to register your algorithm as an OGC application package.
 
+  See also the :doc:`OGC-App-Pack GitHub action <ogc/ogc_app_pack_gha>`, which allows users to build & deploy OGC application packages to the MAAP from GitHub directly.
+
 - **I am new to MAAP. Where do I start?** 
   
-  Follow the instructions in :doc:`Start a Workspace on MAAP Hub <ogc/ogc_on_maap_hub>` to start an OGC workspace.
+  Follow the instructions in :doc:`Start a Workspace on MAAP Hub <ogc/start_hub_workspace>` to start an OGC workspace.
 
-To see which MAAP software service versions are OGC-compliant and which are not, see :doc:`here. <ogc/software_overview>` If you have any questions, be sure to visit the :doc:`FAQ. <ogc/FAQ>`
+To see which MAAP software service versions are OGC-compliant and which are not, see :doc:`here. <ogc/software_overview>`.
 
 .. toctree::
    :maxdepth: 2
@@ -37,4 +41,4 @@ To see which MAAP software service versions are OGC-compliant and which are not,
    ogc/start_hub_workspace.ipynb
    ogc/submit_job.ipynb
    ogc/transition_to_ogc.ipynb
-   ogc/FAQ.ipynb
+   ogc/ogc_app_pack_gha.ipynb
