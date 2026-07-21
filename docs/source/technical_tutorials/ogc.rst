@@ -42,3 +42,4 @@ To see which MAAP software service versions are OGC-compliant and which are not,
    ogc/submit_job.ipynb
    ogc/transition_to_ogc.ipynb
    ogc/ogc_app_pack_gha.ipynb
+   ogc/ogc_examples.ipynb
