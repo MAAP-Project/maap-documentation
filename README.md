@@ -5,35 +5,26 @@ This repository serves as the technical documentation for interfacing with the M
 
 ### Contributing to MAAP Documentation
 
-MAAP documentation is hosted on [maap-project.readthedocs.io](https://maap-project.readthedocs.io), is built using [Sphinx](http://www.sphinx-doc.org/en/master/index.html) and written in [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html). If you want to contribute to the documentation, you can do so by forking the repository, creating a branch for your changes and editing the documentation files in the docs directory of the repo.
+MAAP documentation is hosted on [maap-project.readthedocs.io](https://maap-project.readthedocs.io) (served at https://docs.maap-project.org) and is built with [MyST](https://mystmd.org) (the engine behind [Jupyter Book 2](https://jupyterbook.org)). Pages are Jupyter notebooks (`.ipynb`) and [MyST Markdown](https://mystmd.org/guide) files under `docs/source/`; the table of contents is the `toc` section of `docs/source/myst.yml`. If you want to contribute to the documentation, you can do so by forking the repository, creating a branch for your changes and editing the documentation files in the docs directory of the repo.
 
-This should be built using Python >=3.11.
+Requirements for building locally:
 
-OS-version of [Pandoc](https://pandoc.org/) is also required.
+- Python >= 3.12 and [uv](https://docs.astral.sh/uv/) (installs `mystmd` into a project virtual environment)
+- Node.js >= 20 on your `PATH` (`nvm use` picks up the version in `.nvmrc`)
 
-You need to install Sphinx and supporting packages locally so you can ensure that your edits display correctly before making a pull request to the repository. These steps must be performed locally since MAAP's ADE does not support running a server and likely will not in the future.
-
-To install supporting packages, run the following command:
-
-```
-pip install -r requirements.txt
-```
-
-After installing the necessary packages you build the docs using the following command from the docs directory:
+To build the docs:
 
 ```
-cd docs
-make html
+make setup       # uv sync
+make build       # writes the static site to docs/source/_build/html
+make serve       # http://localhost:8000
 ```
 
-Once the docs have been built successfully, there should be a `build/` directory with the HTML pages.
-To verify the pages look as expected run a local python server.
+`make start` runs the MyST live-reloading development server instead. `make help` lists all targets.
 
-```
-cd build/html
-python3 -m http.server
-# If you are not prompted open a web browser and go to http://localhost:8000/ (default)
-```
+Notebooks are **not** executed during the build: the site renders the outputs that are stored in the committed `.ipynb` files (this was also the case with the previous Sphinx build). Execute notebooks on the MAAP Hub and commit the executed notebook.
+
+The site was migrated from Sphinx/reStructuredText in September 2026; the migration scripts and a full record of the decisions and compromises are in `migration/` (see `migration/agent-docs/`).
 
 ## Running Notebooks Locally
 
