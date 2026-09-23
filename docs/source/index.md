@@ -8,7 +8,9 @@ If you need to look up information specific to the MAAP ADE, please see [last-ad
 Documentation around all other aspects of MAAP remains unchanged, including the use of maap-py and DPS.
 :::
 
-```{toc}
-:context: project
-:depth: 1
-```
+- [Getting Started](getting_started.md)
+- [Science Examples](science_examples.md)
+- [Technical Tutorials](technical_tutorials.md)
+- [System Reference Guide](system_reference.md)
+- [Troubleshooting Guides](troubleshooting_guides.md)
+- [Release Notes](release_notes.md)

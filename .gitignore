@@ -7,3 +7,5 @@ mosaic.json
 _build/
 migration/out/
 .venv/
+__pycache__/
+*.pyc

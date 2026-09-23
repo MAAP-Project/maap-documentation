@@ -24,7 +24,7 @@ make serve       # http://localhost:8000
 
 Notebooks are **not** executed during the build: the site renders the outputs that are stored in the committed `.ipynb` files (this was also the case with the previous Sphinx build). Execute notebooks on the MAAP Hub and commit the executed notebook.
 
-The site was migrated from Sphinx/reStructuredText in September 2026; the migration scripts and a full record of the decisions and compromises are in `migration/` (see `migration/agent-docs/`).
+The site was migrated from Sphinx/reStructuredText in September 2026. Old Sphinx URLs (`*.html`) keep working through redirect stubs written by `docs/redirects/gen_redirects.py` during the build. The one-off migration scripts and a full record of the decisions and compromises are kept in `migration/` for reference (see `migration/README.md`).
 
 ## Running Notebooks Locally
 

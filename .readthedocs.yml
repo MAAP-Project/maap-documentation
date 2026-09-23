@@ -10,8 +10,8 @@ build:
     nodejs: "22"
   commands:
     - pip install uv
-    - uv sync --locked --group migration
+    - uv sync --locked
     - cd docs/source && uv run myst build --html
-    - uv run python migration/gen_redirects.py --html docs/source/_build/html
+    - uv run python docs/redirects/gen_redirects.py --html docs/source/_build/html
     - mkdir -p $READTHEDOCS_OUTPUT/html/
     - cp -r docs/source/_build/html/. $READTHEDOCS_OUTPUT/html/
