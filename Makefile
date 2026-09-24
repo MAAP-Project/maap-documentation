@@ -1,7 +1,7 @@
 # MAAP User Documentation: MyST build.
 #
 #   make setup     install the Python environment (uv) — Node.js >= 20 must be on PATH (see .nvmrc)
-#   make build     build the static site into docs/source/_build/html (+ redirect stubs for old URLs)
+#   make build     build the static site into docs/source/_build/html (+ redirect stubs for old URLs, RTD ad slot)
 #   make serve     serve the built site at http://localhost:8000
 #   make start     live-reloading dev server (myst start)
 #   make clean     remove build output
@@ -21,6 +21,7 @@ setup:
 build:
 	cd $(SRC) && uv run myst build --html 2>&1 | tee ../../$(SRC)/_build/build.log
 	uv run python docs/redirects/gen_redirects.py --html $(HTML)
+	uv run python docs/rtd/add_ad_slot.py --html $(HTML)
 
 serve:
 	@echo "Serving $(HTML) at http://localhost:$(PORT)/"

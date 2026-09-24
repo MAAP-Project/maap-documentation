@@ -13,5 +13,6 @@ build:
     - uv sync --locked
     - cd docs/source && uv run myst build --html
     - uv run python docs/redirects/gen_redirects.py --html docs/source/_build/html
+    - uv run python docs/rtd/add_ad_slot.py --html docs/source/_build/html
     - mkdir -p $READTHEDOCS_OUTPUT/html/
     - cp -r docs/source/_build/html/. $READTHEDOCS_OUTPUT/html/
