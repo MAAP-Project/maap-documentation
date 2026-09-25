@@ -1,0 +1,12 @@
+# Hand-maintained exceptions for the migration scripts.
+
+# Relative link targets that are known to be broken in the source content and are
+# left untouched (reported as MISSING_ALLOWED instead of MISSING). Fixing the content
+# is a separate editorial task; see agent-docs/04-compromises.md.
+allow_missing_links:
+  - "../granules.ipynb"
+
+# Anchors that do not exist on the target page today (already broken on the live
+# site). The link path is still migrated; the anchor text is kept as is.
+allow_unresolved_anchors:
+  - "../system_reference_guide/ssh.ipynb#Accessing-MAAP-workspaces-over-SSH"

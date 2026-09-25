@@ -1,3 +1,19 @@
-[build-system]
-requires = ["setuptools<60.0", "wheel"]
-build-backend = "setuptools.build_meta"
+[project]
+name = "maap-documentation"
+version = "0.0.0"
+description = "MAAP User Documentation (MyST / Jupyter Book site)"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    # MyST CLI (the engine behind Jupyter Book 2). Needs Node.js >= 20 on PATH (see .nvmrc).
+    "mystmd>=1.10,<2",
+]
+
+[dependency-groups]
+# Only needed to (re)run the Sphinx -> MyST migration and its verification scripts.
+migration = [
+    "pyyaml>=6",
+]
+
+[tool.uv]
+package = false

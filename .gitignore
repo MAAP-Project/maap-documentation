@@ -4,3 +4,8 @@ build/
 mosaic.json
 *.h5
 *venv/
+_build/
+migration/out/
+.venv/
+__pycache__/
+*.pyc
