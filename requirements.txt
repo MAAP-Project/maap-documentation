@@ -11,5 +11,7 @@ folium
 pandas
 rioxarray
 sphinx-copybutton
+requests
 rio-stac
 pystac
+shapely
