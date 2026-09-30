@@ -10,6 +10,7 @@ This section of the documentation includes hands-on tutorials with example algor
 
 
   technical_tutorials/dps_tutorial/dps_tutorial_demo.ipynb
+  technical_tutorials/dps_tutorial/dps_stac_metadata.ipynb
   technical_tutorials/searching.rst
   technical_tutorials/visualizing.rst
   technical_tutorials/accessing.rst
