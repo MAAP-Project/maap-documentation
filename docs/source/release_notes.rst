@@ -7,7 +7,7 @@ Release notes will mention the release date, a summary for each release, and com
 6.0.0
 -------------------------------------------------------------
 | July 16, 2026
-| Release changing to follow Open Geospatial Consortium (OGC) standards. To use the new features, please start a new v6.0.0 workspace.
+| Release updating to follow Open Geospatial Consortium (OGC) standards. To use the new features, please start a new v6.0.0 workspace.
 | Adhering to global OGC standards improves interoperability and reproducibility across our science workflows. We plan to transition all users to OGC-compatible environments within the next year and recommend registering new algorithms with our OGC-compatible environments.
 
 Breaking changes
