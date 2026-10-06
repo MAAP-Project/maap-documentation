@@ -23,6 +23,7 @@ Added
 
 | More about OGC `here <https://docs.maap-project.org/en/ogc/technical_tutorials/ogc.html>`_
 | `Algorithm migration guide <https://docs.maap-project.org/en/ogc/technical_tutorials/ogc/transition_to_ogc.html>`_
+| New technical tutorial released: `Cataloging DPS Outputs with STAC <https://docs.maap-project.org/en/latest/technical_tutorials/dps_tutorial/dps_stac_metadata.html>`_
 
 -------------------------------------------------------------
 5.2.0
