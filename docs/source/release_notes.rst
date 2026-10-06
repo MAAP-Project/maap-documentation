@@ -4,6 +4,42 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+6.0.0
+-------------------------------------------------------------
+| July 16, 2026
+| Release updating to follow Open Geospatial Consortium (OGC) standards. To use the new features, please start a new v6.0.0 workspace.
+| Adhering to global OGC standards improves interoperability and reproducibility across our science workflows. We plan to transition all users to OGC-compatible environments within the next year and recommend registering new algorithms with our OGC-compatible environments.
+
+Breaking changes
+^^^^^^^^^^^^
+* All new algorithms registered with this version will follow OGC standards 
+* Legacy Code Compatibility: You can still execute jobs using existing algorithms. However, we highly recommend re-registering your existing algorithms using the new OGC specification and v6.0.0 base images
+* maap-py (v5.0.0+) uses new function names, including snake_case instead of camelCase and modified parameters. Function names `here <https://github.com/MAAP-Project/maap-py/blob/develop/maap/maap.py>`_
+
+Added
+^^^^^^^^^^^^
+* Algorithm Catalog: The catalog now exclusively displays OGC-compatible algorithms in the v6.0 workspaces.
+* Jupyter Extensions: All MAAP Jupyter extensions have been upgraded to interface natively with OGC endpoints, featuring several usability and stability enhancements.
+
+| More about OGC `here <https://docs.maap-project.org/en/ogc/technical_tutorials/ogc.html>`_
+| `Algorithm migration guide <https://docs.maap-project.org/en/ogc/technical_tutorials/ogc/transition_to_ogc.html>`_
+| New technical tutorial released: `Cataloging DPS Outputs with STAC <https://docs.maap-project.org/en/latest/technical_tutorials/dps_tutorial/dps_stac_metadata.html>`_
+
+-------------------------------------------------------------
+5.2.0
+-------------------------------------------------------------
+| July 15, 2026
+| Release with several important improvements. To use the new features, please start a new v5.2.0 workspace.
+
+Added
+^^^^^^^^^^^^
+* R image: Added rclone and enabled sharded repodata for faster resolve times
+* Isce3 image: Added rclone and enabled sharded repodata for faster resolve times. Updated packages including isce3 to v0.25.8
+* Pangeo image: Added rclone and enabled sharded repodata for faster resolve times. General package updates
+* TensorFlow2 GPU image with MAAP extensions (request access for this image): Updated to Pangeo 2026.06.04
+* PyTorch GPU image with MAAP extensions (request access for this image): Updated to Pangeo 2026.06.04
+
+-------------------------------------------------------------
 5.1.0
 -------------------------------------------------------------
 | March 3, 2026
