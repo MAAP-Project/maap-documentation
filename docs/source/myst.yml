@@ -6,6 +6,11 @@ project:
   title: MAAP User Documentation
   github: https://github.com/MAAP-Project/maap-documentation
   copyright: 2020-2026, NASA MAAP Team
+  # Renders anywidget cell outputs (saved widget state in the executed notebook)
+  # as kernel-free interactive widgets on the static site. Pinned to a release;
+  # see docs/widgets/README.md for how it works and how to execute notebooks.
+  plugins:
+  - https://github.com/developmentseed/myst-anywidget-static-export/releases/download/v0.3.2/plugin.mjs
   toc:
   - file: index.md
   - file: getting_started.md

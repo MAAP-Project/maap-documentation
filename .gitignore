@@ -9,3 +9,6 @@ migration/out/
 .venv/
 __pycache__/
 *.pyc
+
+# Sidecar widget assets emitted next to notebooks by myst-anywidget-static-export
+**/_widget_assets/
