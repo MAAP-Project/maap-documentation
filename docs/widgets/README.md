@@ -342,8 +342,16 @@ keep the diff content-only.
 **3.8 MB is `page.widgets`** — mystmd copies the notebook's whole
 `metadata.widgets` state into the page JSON (for the theme's own ipywidgets/thebe
 rendering) *in addition to* the plugin's `anywidget` nodes, so every ESM bundle
-and the raster payload are shipped twice. Options: have the plugin delete
-`page.widgets` once it has exported the outputs (plugin change), or strip it in
-a maap-docs post-build script like `docs/rtd/add_ad_slot.py`. A second, smaller
-duplication: a GeoMap nested in a `Column` carries its 1.1 MB `_esm` inline in
-`_myst_submodels` (known plugin limitation; root widgets use a shared sidecar).
+and the raster payload are shipped twice. The plugin cannot remove it: mystmd
+runs plugin transforms with only the AST + vfile (`plugin(undefined, {select,
+selectAll})(tree, vfile)`) and attaches `postData.widgets = pre.widgets` *after*
+they run, with no setting to turn it off. **Resolved with a post-build step**,
+`docs/widgets/strip_page_widgets.py` (Makefile + `.readthedocs.yml`, after
+`add_ad_slot.py`): for every page JSON that has `anywidget` nodes and no
+un-exported `widget-view` output left, `widgets` is replaced by `{}`. NISAR
+access page JSON: 6.2 MB → 2.5 MB; the browser check still passes (the theme
+does not need `page.widgets` for `anywidget` nodes). A second, smaller
+duplication remains: a GeoMap nested in a `Column` carries its 1.1 MB `_esm`
+inline in `_myst_submodels` (known plugin limitation; root widgets use a shared
+sidecar). Worth an upstream mystmd issue: skip `page.widgets` when the
+notebook's widget outputs were transformed away.

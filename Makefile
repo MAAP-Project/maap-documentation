@@ -23,6 +23,7 @@ build:
 	uv run python docs/redirects/gen_redirects.py --html $(HTML)
 	uv run python docs/redirects/gen_404.py --html $(HTML)
 	uv run python docs/rtd/add_ad_slot.py --html $(HTML)
+	uv run python docs/widgets/strip_page_widgets.py --html $(HTML)
 
 serve:
 	@echo "Serving $(HTML) at http://localhost:$(PORT)/"
