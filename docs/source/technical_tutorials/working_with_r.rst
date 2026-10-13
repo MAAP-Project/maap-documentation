@@ -16,3 +16,4 @@ Working with R
   working_with_r/gedi_access_r.ipynb
   working_with_r/visualizing_with_titiler-pgstac.ipynb
   working_with_r/vector_data_visualization.ipynb
+  working_with_r/COPC_access_in_R_lasR.ipynb
