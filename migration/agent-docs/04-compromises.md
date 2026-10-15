@@ -76,6 +76,33 @@ If `develop` has changed `NISAR_access.ipynb` by the time it is re-applied, take
 develop's notebook, redo the source edits and re-execute on the hub rather than
 hand-merging executed outputs.
 
+## C9. RST admonitions inside markdown cells rendered as literal text — FIXED (2026-10-15)
+
+Found while checking the deployed site after the 2026-10-15 `develop` sync. 24
+`.. note::` / `.. warning::` / `.. important::` lines sit inside **markdown**
+cells (not raw cells) in 10 notebooks: `getting_started/getting_started`,
+`running_at_scale`, `writing_code`, `system_reference_guide/custom-environments`,
+`jobs_maappy`, `jobsui`, `organizations`, `work_with_git`,
+`technical_tutorials/dps_tutorial/dps_tutorial_demo`, `dps_stac_metadata`.
+nbsphinx passes markdown through pandoc to RST, so Sphinx rendered each one as
+an admonition (checked on the live `/en/latest/` pages). MyST showed the raw
+`.. note::` text. **This was a fidelity loss in the migration from the start**
+(23 of the 24 pre-date the sync; `01-inventory.md` wrongly said they render as
+plain text). The deployed preview had it until this fix.
+
+Fix: each directive's own paragraph (the directive line plus following lines up
+to the next blank line, which is exactly what Sphinx put in the box) is wrapped
+in a `:::{note}` / `:::{warning}` / `:::{important}` fence, with indentation
+removed; nothing else in the cell changes. Verified against the live Sphinx
+pages: all 24 have the same kind and text (the only difference is MyST's
+zero-width break hints inside the auto-linked `support@maap-project.org`).
+
+Behaviour kept as-is (content issue, not changed): in `getting_started.ipynb`
+the `important` box is followed by an indented paragraph ("If you began at the
+MAAP sign-up page…") that the author probably meant to be inside the box. Both
+Sphinx and MyST render it as a code block *outside* the box. Worth a content
+fix by the page owner: un-indent it, or move it into the box.
+
 ## Pre-existing content issues found during migration (not caused by it)
 
 - `technical_tutorials/dps_tutorial/*.ipynb`: links written as

@@ -125,7 +125,10 @@ Inline HTML in markdown cells: `<img src="../_static/gitlab2.png" height="450">`
 (`work_with_git.ipynb`), `<div class="alert alert-block alert-info">` with an
 `<a href="federated-collection-discovery/collection_discovery.html">`
 (`search/collections.ipynb`), `<sub>` (`troubleshooting/kernel_resetting.ipynb`),
-literal `.. note::` text in `custom-environments.ipynb` (renders as plain text today).
+`.. note::` lines in `custom-environments.ipynb` (and, as found on 2026-10-15,
+23 more RST admonitions in markdown cells across 10 notebooks). **Correction
+(2026-10-15):** these did *not* render as plain text on Sphinx; nbsphinx turned
+them into admonitions. See `04-compromises.md` C9.
 
 Anchor formats: nbsphinx = heading text with spaces replaced by `-`, case and
 punctuation preserved (`#Passing-Credentials-for-Other-Services-into-Jobs-(Secrets-Management)`).

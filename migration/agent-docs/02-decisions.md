@@ -154,5 +154,15 @@ ported by hand rather than by re-running the generator. First sync: `develop` at
   version was taken whole, so the only difference from `develop` is the converted
   cell. **Repeat this check on every future sync:**
   `grep -rl text/restructuredtext docs/source --include='*.ipynb'` must find nothing.
+- **RST admonitions inside markdown cells** (added after the deployed-site
+  check): nbsphinx rendered `.. note::` / `.. warning::` / `.. important::`
+  lines in markdown cells as admonitions too, so they are converted the same
+  way (see `04-compromises.md` C9). On every sync, this must print nothing
+  (it covers both raw and markdown cells, and cells whose `source` is a single
+  string, which a plain grep misses):
+
+  ```
+  python3 -c 'import json,glob,re; [print(p,i) for p in glob.glob("docs/source/**/*.ipynb",recursive=True) if "_build" not in p for i,c in enumerate(json.load(open(p))["cells"]) if c["cell_type"]!="code" and re.search(r"(?m)^\s*\.\. [a-z-]+::","".join(c["source"]))]'
+  ```
 - Clean merges (`work_with_git.ipynb`, `visualizing_titiler-pgstac.ipynb`, the
   three new `dps_tutorial/_static/*.png`) needed no changes.
