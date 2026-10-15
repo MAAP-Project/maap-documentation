@@ -123,3 +123,36 @@ which deletes untracked files there. During the session a `.gitignore` mistake (
 ignored and got deleted by that step. `.gitignore` is fixed and `make migrate` now
 refuses to run while `docs/source` has uncommitted changes (override with
 `FORCE=1`). After the migration is merged, `make migrate` is no longer needed.
+
+## 2026-10-15: syncing `develop` into the migration branch
+
+The migration is frozen, so `develop` changes are merged with `git merge` and
+ported by hand rather than by re-running the generator. First sync: `develop` at
+`257139c` (merge-base `0dcbe21`). How each change was handled:
+
+- **`.rst` pages** (`release_notes.rst`, `technical_tutorials.rst`) are deleted on
+  this branch, so they come up as modify/delete conflicts. Port the diff into the
+  `.md` page in its existing style, and toctree changes into `myst.yml`. This
+  time: the 6.0.0 and 5.2.0 release notes, and `dps_stac_metadata.ipynb` moved
+  from a hidden toc entry to visible after `dps_tutorial_demo.ipynb`. Absolute
+  `docs.maap-project.org/...html` links in the release notes are left as they are
+  (served by the redirect stubs, as for all absolute links).
+- **`requirements.txt`** stays deleted. Develop added `requests` and `shapely`,
+  but it was the Sphinx build's environment and notebooks are not executed at
+  build time. The MyST build environment is `pyproject.toml` + `uv.lock`.
+- **Raw reStructuredText cells.** PR #603 turned the HTML `alert-info` boxes in
+  7 notebooks into raw cells with `raw_mimetype: text/restructuredtext` holding
+  `.. note::`. nbsphinx rendered those as Sphinx notes; **MyST does not render
+  raw RST cells at all**, so merged as-is the notes would silently vanish. Each
+  is converted to a markdown cell holding a MyST `:::{note}` block: RST links
+  become markdown links, relative `.html` links become `.ipynb` (same rule as
+  the original link rewrite), cell id kept, `raw_mimetype`/`vscode` metadata
+  dropped. Notebooks: `search/collections`, `search/granules`,
+  `search/searching_edsc_gui`, `working_with_r/access_cmr_r`,
+  `working_with_r/cmr_search_in_r`, `working_with_r/maap_stac_r`,
+  `dps_tutorial/dps_stac_metadata`. For the conflicting notebooks develop's
+  version was taken whole, so the only difference from `develop` is the converted
+  cell. **Repeat this check on every future sync:**
+  `grep -rl text/restructuredtext docs/source --include='*.ipynb'` must find nothing.
+- Clean merges (`work_with_git.ipynb`, `visualizing_titiler-pgstac.ipynb`, the
+  three new `dps_tutorial/_static/*.png`) needed no changes.

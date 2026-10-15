@@ -62,6 +62,9 @@ Five notebooks were not in any Sphinx toctree but were built and reachable by UR
 `technical_tutorials/dps_tutorial/dps_stac_metadata.ipynb`). They are now `hidden: true`
 toc entries: built, linkable, not shown in the sidebar. Same as before.
 
+`dps_stac_metadata.ipynb` was made visible on `develop` (PR #598, merged here
+2026-10-15) and is now a normal toc entry after `dps_tutorial_demo.ipynb`.
+
 ## C8. Interactive NISAR_access widgets deferred (2026-10-15) — not a fidelity loss
 
 The anywidget work on `science/NISAR/NISAR_access.ipynb` (commits `92965aa`,

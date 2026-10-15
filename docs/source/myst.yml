@@ -48,6 +48,7 @@ project:
   - file: technical_tutorials.md
     children:
     - file: technical_tutorials/dps_tutorial/dps_tutorial_demo.ipynb
+    - file: technical_tutorials/dps_tutorial/dps_stac_metadata.ipynb
     - file: technical_tutorials/searching.md
       children:
       - file: technical_tutorials/search/federated-collection-discovery/collection_discovery.ipynb
@@ -97,8 +98,6 @@ project:
       - file: technical_tutorials/working_with_r/visualizing_with_titiler-pgstac.ipynb
       - file: technical_tutorials/working_with_r/vector_data_visualization.ipynb
     - file: technical_tutorials/dps_tutorial/DPS_runner_template.ipynb
-      hidden: true
-    - file: technical_tutorials/dps_tutorial/dps_stac_metadata.ipynb
       hidden: true
   - file: system_reference.md
     children:
