@@ -62,6 +62,17 @@ Five notebooks were not in any Sphinx toctree but were built and reachable by UR
 `technical_tutorials/dps_tutorial/dps_stac_metadata.ipynb`). They are now `hidden: true`
 toc entries: built, linkable, not shown in the sidebar. Same as before.
 
+## C8. Interactive NISAR_access widgets deferred (2026-10-15) — not a fidelity loss
+
+The anywidget work on `science/NISAR/NISAR_access.ipynb` (commits `92965aa`,
+`2721bcc`) was reverted, so the page is back to its original static outputs
+(matplotlib PNG, `KeysView` text), exactly as on the Sphinx site. This is a
+deferral of an *enhancement*, not a regression from Sphinx. The work lives on
+branch `feat/nisar-widgets` (reference notes in `docs/widgets/README.md` there).
+If `develop` has changed `NISAR_access.ipynb` by the time it is re-applied, take
+develop's notebook, redo the source edits and re-execute on the hub rather than
+hand-merging executed outputs.
+
 ## Pre-existing content issues found during migration (not caused by it)
 
 - `technical_tutorials/dps_tutorial/*.ipynb`: links written as
