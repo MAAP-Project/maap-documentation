@@ -1,28 +1,8 @@
-.wy-side-nav-search, .wy-nav-top {
-    background: #bdc3c7;
-}
+/* Site CSS for the MyST build (site.options.style in myst.yml). */
 
-.wy-side-nav-search>div.version {
-    color: #34495e;
-}
-
-.wy-nav-side {
-  background: #ecf0f1;
-}
-
-.wy-nav-side .caption-text{
-  color: #34495e;
-}
-
-.wy-nav-side .reference.internal {
-  color: #34495e;
-}
-
-.wy-nav-side .reference.internal:hover {
-  background: #2980b9;
-  color: #ecf0f1;
-}
-
-.wy-nav-content-wrap {
-  background: #fcfcfc;
+/* Isolated (iframe) notebook outputs, e.g. R htmlwidgets/Leaflet maps, span the
+   content column as they did under nbsphinx. Without this the browser default
+   iframe width of 300px applies. See migration/agent-docs/03-spike-results.md. */
+iframe.jp-mod-isolated {
+  width: 100%;
 }
