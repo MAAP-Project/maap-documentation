@@ -76,6 +76,12 @@ If `develop` has changed `NISAR_access.ipynb` by the time it is re-applied, take
 develop's notebook, redo the source edits and re-execute on the hub rather than
 hand-merging executed outputs.
 
+**2026-10-20: re-applied for a demo.** `92965aa` + `2721bcc` were cherry-picked back
+as one commit titled `DEMO (revert before merge): …`, so the RTD preview shows the
+widgets (RTD only deploys this branch). That commit also adds this paragraph.
+**`git revert` it before #600 merges.** Reverting restores the static page and removes
+the plugin line, the strip step and `docs/widgets/`.
+
 ## C9. RST admonitions inside markdown cells rendered as literal text — FIXED (2026-10-15)
 
 Found while checking the deployed site after the 2026-10-15 `develop` sync. 24
