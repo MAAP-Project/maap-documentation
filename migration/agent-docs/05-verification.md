@@ -1,5 +1,8 @@
 # Verification log
 
+> Scripts under `migration/` named here (`migrate.py`, `verify.py`, `checks/`, …) were
+> removed before the merge; they are kept at the git tag `sphinx-to-myst-migration-scripts`.
+
 How the MyST build was checked against the Sphinx site, and the results. Scripts:
 `migration/verify.py` (structural + output audit) and `migration/checks/*.py`
 (browser probes). Baseline = live site `https://docs.maap-project.org/en/latest/`

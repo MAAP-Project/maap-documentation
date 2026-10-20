@@ -6,7 +6,8 @@ MyST serves it at /technical-tutorials/search/catalog/. mystmd has no redirect f
 so for every old page a small HTML file is written at the old path that redirects to
 the new one, translating an nbsphinx-style #Heading-Anchor into the mystmd id form.
 The mapping is redirect_map.json next to this script. It was generated once by the
-Sphinx -> MyST migration (see migration/README.md); add an entry by hand if a page moves.
+Sphinx -> MyST migration (see migration/README.md); add an entry by hand if a page
+that existed on the Sphinx site moves.
 
 Usage: python docs/redirects/gen_redirects.py [--html docs/source/_build/html]
 Runs on ReadTheDocs after `myst build --html` (see .readthedocs.yml).

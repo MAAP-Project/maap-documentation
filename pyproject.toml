@@ -9,11 +9,5 @@ dependencies = [
     "mystmd>=1.10,<2",
 ]
 
-[dependency-groups]
-# Only needed to (re)run the Sphinx -> MyST migration and its verification scripts.
-migration = [
-    "pyyaml>=6",
-]
-
 [tool.uv]
 package = false

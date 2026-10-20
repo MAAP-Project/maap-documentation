@@ -2,6 +2,9 @@
 
 Newest entries at the bottom. Each entry: date, decision, why, alternatives considered.
 
+> Scripts under `migration/` named here (`migrate.py`, `verify.py`, `checks/`, …) were
+> removed before the merge; they are kept at the git tag `sphinx-to-myst-migration-scripts`.
+
 ## 2026-09-11: Use MyST (`mystmd`) directly rather than the `jupyter-book` wrapper
 
 `jupyter-book` 2.x is a white-labelled `mystmd` CLI (same commands, same `myst.yml`).
@@ -166,3 +169,19 @@ ported by hand rather than by re-running the generator. First sync: `develop` at
   ```
 - Clean merges (`work_with_git.ipynb`, `visualizing_titiler-pgstac.ipynb`, the
   three new `dps_tutorial/_static/*.png`) needed no changes.
+
+## 2026-10-15: Trim `migration/` to the decision record before merging
+
+The frozen migration scripts (`migrate.py` and its steps, `verify.py`, `checks/`,
+`overrides.yml`) and the `migration` uv dependency group (pyyaml) are removed from
+the branch. Only `agent-docs/` and a short `README.md` stay. The scripts are kept at
+the git tag `sphinx-to-myst-migration-scripts` (at `a79a68b`), so they survive a squash
+merge. Why: they are not part of the build and are not maintained, and they made PR
+#600 bigger to review. Alternatives: keep everything (more for reviewers), or remove
+agent-docs too (the compromises list should stay next to the content).
+
+Also added to `CONTRIBUTING.md`: "Adding a notebook or page". Checked with a real
+build (a scratch notebook outside the toc, 2026-10-15): **a notebook that is not in
+`project.toc` is not built, and mystmd prints no warning**, so the how-to says so.
+It also covers MyST admonitions and the leftover-RST one-liner above, so that
+contributors don't add `.. note::` again.
