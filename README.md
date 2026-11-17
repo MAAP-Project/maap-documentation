@@ -9,7 +9,8 @@ MAAP documentation is hosted on [maap-project.readthedocs.io](https://maap-proje
 
 Requirements for building locally:
 
-- Python >= 3.12 and [uv](https://docs.astral.sh/uv/) (installs `mystmd` into a project virtual environment)
+- Python >= 3.12
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) (install it before running `make setup`; it installs `mystmd` into a project virtual environment)
 - Node.js >= 20 on your `PATH` (`nvm use` picks up the version in `.nvmrc`)
 
 To build the docs:

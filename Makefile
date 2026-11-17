@@ -9,6 +9,7 @@
 SRC := docs/source
 HTML := $(SRC)/_build/html
 PORT ?= 8000
+SHELL := /bin/bash
 
 .PHONY: help setup build serve start clean
 
@@ -19,7 +20,7 @@ setup:
 	uv sync
 
 build:
-	cd $(SRC) && uv run myst build --html 2>&1 | tee ../../$(SRC)/_build/build.log
+	set -o pipefail; cd $(SRC) && uv run myst build --html 2>&1 | tee ../../$(SRC)/_build/build.log
 	uv run python docs/redirects/gen_redirects.py --html $(HTML)
 	uv run python docs/redirects/gen_404.py --html $(HTML)
 	uv run python docs/rtd/add_ad_slot.py --html $(HTML)
