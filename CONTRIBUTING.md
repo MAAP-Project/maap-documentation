@@ -58,7 +58,7 @@ Run `$ make build` (or `$ make start` for a live-reloading server) from the repo
 
 #### Adding a notebook or page
 
--   **Add it to the table of contents.** Every page needs a `- file:` line in the `toc` section of `docs/source/myst.yml`, under the section it belongs to (paths are relative to `docs/source/`). A notebook that is not listed there is **not published, and the build does not warn about it**. Section pages such as `science_examples.md` list their children automatically, so they do not need editing. To publish a page that can be linked to but does not appear in the sidebar, add `hidden: true` to its entry.
+-   **Add it to the table of contents.** Every page needs a `- file:` line in the `toc` section of `docs/source/myst.yml`, under the section it belongs to (paths are relative to `docs/source/`). A notebook that is not listed there is **not published, and the build does not warn about it**. When adding a science example, also add its page link to `docs/source/science_examples.md`. To publish a page that can be linked to but does not appear in the sidebar, add `hidden: true` to its entry.
 -   **Title.** The page title is the first heading in the notebook (or `.md` file), so start it with a `#` heading.
 -   **Notes and warnings.** Use MyST syntax in markdown cells:
 
@@ -72,7 +72,6 @@ Run `$ make build` (or `$ make start` for a live-reloading server) from the repo
 
 -   **Links and images.** Link to other pages by their relative file path (for example `[Jobs](../system_reference_guide/jobs_maappy.ipynb)`), and use relative paths for images.
 -   **Outputs.** The build never runs notebooks; the page shows the outputs saved in the `.ipynb`. Run the notebook on the MAAP Hub and commit it with its outputs.
--   **macOS note.** On a case-insensitive file system a few links on the Science Examples page download the `.ipynb` instead of opening the page in a local build. This does not happen on ReadTheDocs.
 
 #### 5.  Commit your changes and push your branch to GitHub:
 
