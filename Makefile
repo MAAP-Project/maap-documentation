@@ -23,6 +23,7 @@ build:
 	set -o pipefail; cd $(SRC) && uv run myst build --html 2>&1 | tee ../../$(SRC)/_build/build.log
 	uv run python docs/redirects/gen_redirects.py --html $(HTML)
 	uv run python docs/redirects/gen_404.py --html $(HTML)
+	uv run python docs/rtd/fix_science_example_links.py --html $(HTML)
 	uv run python docs/rtd/add_ad_slot.py --html $(HTML)
 	uv run python docs/widgets/strip_page_widgets.py --html $(HTML)
 

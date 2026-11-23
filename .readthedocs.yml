@@ -14,6 +14,7 @@ build:
     - cd docs/source && uv run myst build --html
     - uv run python docs/redirects/gen_redirects.py --html docs/source/_build/html
     - uv run python docs/redirects/gen_404.py --html docs/source/_build/html
+    - uv run python docs/rtd/fix_science_example_links.py --html docs/source/_build/html
     - uv run python docs/rtd/add_ad_slot.py --html docs/source/_build/html
     - uv run python docs/widgets/strip_page_widgets.py --html docs/source/_build/html
     - mkdir -p $READTHEDOCS_OUTPUT/html/

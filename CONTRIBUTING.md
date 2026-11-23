@@ -58,7 +58,7 @@ Run `$ make build` (or `$ make start` for a live-reloading server) from the repo
 
 #### Adding a notebook or page
 
--   **Add it to the table of contents.** Every page needs a `- file:` line in the `toc` section of `docs/source/myst.yml`, under the section it belongs to (paths are relative to `docs/source/`). A notebook that is not listed there is **not published, and the build does not warn about it**. When adding a science example, also add its page link to `docs/source/science_examples.md`. To publish a page that can be linked to but does not appear in the sidebar, add `hidden: true` to its entry.
+-   **Add it to the table of contents.** Every page needs a `- file:` line in the `toc` section of `docs/source/myst.yml`, under the section it belongs to (paths are relative to `docs/source/`). A notebook that is not listed there is **not published, and the build does not warn about it**. Section pages such as `science_examples.md` list their children automatically, so they do not need editing. To publish a page that can be linked to but does not appear in the sidebar, add `hidden: true` to its entry.
 -   **Title.** The page title is the first heading in the notebook (or `.md` file), so start it with a `#` heading.
 -   **Notes and warnings.** Use MyST syntax in markdown cells:
 
