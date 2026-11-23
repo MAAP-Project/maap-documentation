@@ -4,6 +4,25 @@ Release Notes
 Release notes will mention the release date, a summary for each release, and comprehensive descriptions of major changes, minor changes, feature removal, and bug-fixes. This is typically more comprehensive than the announcements on the GitHub Discussion board: https://github.com/orgs/MAAP-Project/discussions/categories/announcements.
 
 -------------------------------------------------------------
+6.1.0
+-------------------------------------------------------------
+| November 20, 2026
+| Release updating extensions. To use the new features, please start a new v6.1.0 workspace.
+
+
+Fixed
+^^^^^^^^^^^^
+* Resolved CSS nested rendering
+* Algorithm registration issues, such as failures when too many registrations occur simultaneously
+
+
+Added
+^^^^^^^^^^^^
+* Updated My Builds & Deployment MAAP Jupyter plugin to show algorithms that were built & deployed as well as those that were just deployed to MAAP
+* Improved support for handling input defaults in the Register Algorithms MAAP Jupyter plugin
+
+
+-------------------------------------------------------------
 6.0.0
 -------------------------------------------------------------
 | July 16, 2026
