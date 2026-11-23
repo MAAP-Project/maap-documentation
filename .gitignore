@@ -9,5 +9,5 @@ _build/
 __pycache__/
 *.pyc
 
-# Sidecar widget assets emitted next to notebooks by myst-anywidget-static-export
+# Generated notebook widget assets from local previews
 **/_widget_assets/
