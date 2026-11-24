@@ -4,3 +4,10 @@ build/
 mosaic.json
 *.h5
 *venv/
+_build/
+.venv/
+__pycache__/
+*.pyc
+
+# Generated notebook widget assets from local previews
+**/_widget_assets/
