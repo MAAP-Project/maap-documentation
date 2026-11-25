@@ -36,7 +36,7 @@ The code below discovers granules from the `ABoVE LVIS L2 Geolocated Surface Ele
 
 ```python
 COLLECTION_ID = 'C1200125288-NASA_MAAP'
-results = maap.searchGranule(concept_id=COLLECTION_ID)
+results = maap.search_granule(concept_id=COLLECTION_ID)
 pprint(f'Got {len(results)} results')
 ```
 
@@ -44,7 +44,7 @@ This dataset exists in NASA's Operational CMR. Using <https://search.earthdata.n
 
 ```python
 COLLECTION_ID = 'C1513105984-NSIDC_ECS'
-results = maap.searchGranule(
+results = maap.search_granule(
   cmr_host='cmr.earthdata.nasa.gov',
   concept_id=COLLECTION_ID
 )
@@ -58,7 +58,7 @@ This code discovers granules from the `Landsat 8 Operational Land Imager (OLI) S
 ```python
 COLLECTION_ID = 'C1200110769-NASA_MAAP'
 
-results = maap.searchGranule(concept_id=COLLECTION_ID)
+results = maap.search_granule(concept_id=COLLECTION_ID)
 pprint(f'Got {len(results)} results')
 ```
 

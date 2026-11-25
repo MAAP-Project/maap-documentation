@@ -97,6 +97,16 @@ project:
       - file: technical_tutorials/working_with_r/gedi_access_r.ipynb
       - file: technical_tutorials/working_with_r/visualizing_with_titiler-pgstac.ipynb
       - file: technical_tutorials/working_with_r/vector_data_visualization.ipynb
+    - file: technical_tutorials/ogc.md
+      children:
+      - file: technical_tutorials/ogc/build_application_packages.ipynb
+      - file: technical_tutorials/ogc/software_overview.ipynb
+      - file: technical_tutorials/ogc/start_hub_workspace.ipynb
+      - file: technical_tutorials/ogc/submit_job.ipynb
+      - file: technical_tutorials/ogc/transition_to_ogc.ipynb
+      - file: technical_tutorials/ogc/ogc_app_pack_gha.ipynb
+      - file: technical_tutorials/ogc/ogc_examples.ipynb
+      - file: technical_tutorials/ogc/FAQ.ipynb
     - file: technical_tutorials/dps_tutorial/DPS_runner_template.ipynb
       hidden: true
   - file: system_reference.md
@@ -108,6 +118,7 @@ project:
     - file: system_reference_guide/algorithm_registration.ipynb
     - file: system_reference_guide/jobsui.ipynb
     - file: system_reference_guide/jobs_maappy.ipynb
+    - file: system_reference_guide/maappy_algorithms_jobs.ipynb
     - file: system_reference_guide/dps_queues.ipynb
     - file: system_reference_guide/work_with_git.ipynb
     - file: system_reference_guide/organizations.ipynb
